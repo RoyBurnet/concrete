@@ -4,7 +4,7 @@ import { graphql, StaticQuery, Link } from "gatsby"
 import styled from "styled-components"
 
 const ArticleItemCard = styled.div`
-  width: 363px;
+  width: 300px;
   height: 321px;
   border: 1px solid #efefef;
   margin: 16px;
@@ -19,6 +19,10 @@ const ArticleItemCard = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   transition: background 300ms ease-in 5s;
   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.08);
+  }
 `
 
 const ArticleThumbnailImage = styled.img`
@@ -29,8 +33,6 @@ const ArticleThumbnailImage = styled.img`
 
 const ArticleTextExcerpt = styled.div`
   max-width: 100%;
-
-  /* background-color: #d8d8d8; */
   padding: 6px;
   flex: 2;
 `
@@ -39,10 +41,21 @@ const ArticleReadMoreBtn = styled.button`
   color: black;
   border-radius: 6px;
   text-decoration: none;
+  border: none;
+  background-color: #d8d8d8;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
 `
 
 const ExcerptContent = styled.div`
   height: 70px;
+`
+
+const LinkTag = styled(Link)`
+  color: white;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
 `
 
 const ArticleItem = () => {
@@ -85,7 +98,9 @@ const ArticleItem = () => {
                   }}
                 />
                 <ArticleReadMoreBtn>
-                  <Link to={`/article/${articleItem.node.slug}`}>Read</Link>
+                  <LinkTag to={`/article/${articleItem.node.slug}`}>
+                    Read
+                  </LinkTag>
                 </ArticleReadMoreBtn>
               </ArticleTextExcerpt>
             </ArticleItemCard>

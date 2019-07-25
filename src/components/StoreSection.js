@@ -18,6 +18,7 @@ const StoreImage = styled.img`
  max-width: 400px;
  align-self: center;
  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
+
 `
 
 const StoreBtn = styled.button`
