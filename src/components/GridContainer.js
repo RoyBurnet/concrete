@@ -1,14 +1,13 @@
 import React from "react"
 import styled from "styled-components"
 import GridContainerItem from "./GridContainerItem"
-import {Link} from 'gatsby';
+import { Link } from "gatsby"
 
 const GridContainerItemsWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   color: #d8d8d8;
-  margin-bottom: 100px;
 `
 const GridContainerItemsWrapperTitle = styled.div`
   background-color: #d8d8d8;
@@ -24,10 +23,9 @@ const GridContainerItemsWrapperMoreBtn = styled.button`
   color: black;
   border-radius: 6px;
   text-decoration: none;
-  
+
   margin-bottom: 140px;
   margin-top: 20px;
-
 `
 
 const GridContainerContainer = props => {
@@ -36,14 +34,9 @@ const GridContainerContainer = props => {
       <hr />
       <GridContainerItemsWrapperTitle></GridContainerItemsWrapperTitle>
       <GridContainerItemsWrapper>
-          {props.data.map((data) => {
-            return (
-              <GridContainerItem data={data} />
-            )
-          })}
- 
-          <GridContainerItemsWrapperMoreBtn><Link to='/article'>SEE MORE</Link></GridContainerItemsWrapperMoreBtn>
-
+        {props.data.map(data => {
+          return <GridContainerItem data={data} />
+        })}
       </GridContainerItemsWrapper>
     </>
   )
