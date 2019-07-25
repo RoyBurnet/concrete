@@ -8,6 +8,7 @@ const GridContainerItemsWrapper = styled.div`
   justify-content: center;
   flex-wrap: wrap;
   color: #d8d8d8;
+  margin-bottom: 100px;
 `
 const GridContainerItemsWrapperTitle = styled.div`
   background-color: #d8d8d8;
@@ -26,8 +27,7 @@ const GridContainerItemsWrapperMoreBtn = styled.button`
   
   margin-bottom: 140px;
   margin-top: 20px;
-  /* text-align: center;
-  padding-top: 7px; */
+
 `
 
 const GridContainerContainer = props => {

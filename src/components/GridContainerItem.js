@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 const GridContainerItemCard = styled.div`
-  width: 363px;
+  width: 300px;
   height: 321px;
   border: 1px solid #efefef;
   margin: 16px;
@@ -18,6 +18,10 @@ const GridContainerItemCard = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   transition: background 300ms ease-in 5s;
   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.08);
+  }
 `
 
 const GridContainerThumbnailImage = styled.img`
@@ -28,7 +32,6 @@ const GridContainerThumbnailImage = styled.img`
 
 const GridContainerTextExcerpt = styled.div`
   width: 100%;
-  /* background-color: #d8d8d8; */
   padding: 6px;
   flex: 2;
 `
@@ -41,6 +44,18 @@ const CardItemReadMoreBtn = styled.button`
   color: black;
   border-radius: 6px;
   text-decoration: none;
+  text-decoration: none;
+  border: none;
+  background-color: #d8d8d8;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
+`
+
+const LinkTag = styled(Link)`
+  color: white;
+  &:hover {
+    text-decoration: none;
+    color: white;
+  }
 `
 
 const GridContainerItem = props => {
@@ -59,7 +74,7 @@ const GridContainerItem = props => {
           }}
         />
         <CardItemReadMoreBtn>
-          <Link to={`/article/${props.data.node.slug}`}>Read</Link>
+          <LinkTag to={`/article/${props.data.node.slug}`}>Read</LinkTag>
         </CardItemReadMoreBtn>
       </GridContainerTextExcerpt>
     </GridContainerItemCard>
