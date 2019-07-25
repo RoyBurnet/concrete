@@ -22,7 +22,6 @@ overflow: hidden;
   max-width: 1200px;
   margin: auto;
   min-height: 100%;
-  padding: 30px;
 `
 
 const Footer = styled.footer`
