@@ -13,6 +13,8 @@ const BannerWrapper = styled.div`
 `
 
 const BannerImage = styled.img`
+  background-position: center;
+  background-size: cover;
   width: 100%;
 `
 
@@ -27,9 +29,9 @@ const BannerCTAContainer = styled.div`
   text-align: center;
 `
 const Title = styled.div`
-    font-size: -webkit-xxx-large;
-    font-style: italic;
-    color: white;
+  font-size: -webkit-xxx-large;
+  font-style: italic;
+  color: white;
 `
 
 const Banner = props => {
