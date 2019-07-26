@@ -35,15 +35,17 @@ const ArticleTextExcerpt = styled.div`
   max-width: 100%;
   padding: 6px;
   flex: 2;
+  color: black;
 `
 
-const ArticleReadMoreBtn = styled.button`
+const ArticleReadMoreBtn = styled.div`
   color: black;
   border-radius: 6px;
   text-decoration: none;
   border: none;
   background-color: #d8d8d8;
   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
+  height: 10px;
 `
 
 const ExcerptContent = styled.div`
@@ -82,28 +84,26 @@ const ArticleItem = () => {
       render={props => (
         <>
           {props.allWordpressWpArticle.edges.map(articleItem => (
-            <ArticleItemCard key={articleItem.node.id}>
-              <ArticleThumbnailImage
-                src={articleItem.node.featured_media.source_url}
-              />
-              <ArticleTextExcerpt>
-                <h6>
-                  <strong>{articleItem.node.title}</strong>
-                </h6>
-                <ExcerptContent
-                  dangerouslySetInnerHTML={{
-                    __html: !(articleItem.node.excerpt > 75)
-                      ? articleItem.node.excerpt.substring(0, 75) + "..."
-                      : articleItem.node.excerpt,
-                  }}
+            <LinkTag to={`/article/${articleItem.node.slug}`}>
+              <ArticleItemCard key={articleItem.node.id}>
+                <ArticleThumbnailImage
+                  src={articleItem.node.featured_media.source_url}
                 />
-                <ArticleReadMoreBtn>
-                  <LinkTag to={`/article/${articleItem.node.slug}`}>
-                    Read
-                  </LinkTag>
-                </ArticleReadMoreBtn>
-              </ArticleTextExcerpt>
-            </ArticleItemCard>
+                <ArticleTextExcerpt>
+                  <h6>
+                    <strong>{articleItem.node.title}</strong>
+                  </h6>
+                  <ExcerptContent
+                    dangerouslySetInnerHTML={{
+                      __html: !(articleItem.node.excerpt > 75)
+                        ? articleItem.node.excerpt.substring(0, 75) + "..."
+                        : articleItem.node.excerpt,
+                    }}
+                  />
+
+                </ArticleTextExcerpt>
+              </ArticleItemCard>
+            </LinkTag>
           ))}
         </>
       )}

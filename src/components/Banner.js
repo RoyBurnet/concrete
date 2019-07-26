@@ -35,9 +35,9 @@ const Title = styled.div`
 `
 
 const Banner = props => {
+
   return (
-    <BannerWrapper>
-      <BannerImage src={props.background} alt="" />
+    <BannerWrapper style={{backgroundImage: `url(${props.background})`}}>
       <BannerCTAContainer>
         <Title>
           {" "}
