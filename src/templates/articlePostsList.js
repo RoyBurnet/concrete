@@ -10,11 +10,12 @@ import Logo from "../images/logo.png"
 const Pagination = styled.div`
   margin-top: 50px;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   flex-direction: row;
 `
 
 const PagenumberWrapper = styled.div`
+  /* text-align: 100px; */
   border: 1px solid #eee;
   background: ${props => (props.isCurrentPage ? "#eee" : "white")};
 `
@@ -24,8 +25,8 @@ const Pagenumber = styled(Link)`
   display: block;
   padding: 8px 16px;
 
-  &:hover{
-    color: black
+  &:hover {
+    color: black;
   }
 `
 

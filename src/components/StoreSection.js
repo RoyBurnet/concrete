@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import bookImg from '../images/book.png';
 
 const StoreWrapper = styled.div`
+padding: 0px 20px;
 margin-top: 50px;
 margin-bottom: 50px;
   width: 100%;
@@ -14,8 +15,9 @@ margin-bottom: 50px;
 `
 
 const StoreImage = styled.img`
- height: 600px;
- max-width: 400px;
+padding: 0px 0px;
+ height: 500px;
+ max-width: 350px;
  align-self: center;
  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
 

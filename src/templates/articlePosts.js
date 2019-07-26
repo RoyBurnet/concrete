@@ -15,8 +15,8 @@ export default ({ pageContext }) => {
           <br />
           <br />
           <Banner background={pageContext.featured_media.source_url} />
-          <h1 dangerouslySetInnerHTML={{ __html: pageContext.title }} />
-          <div dangerouslySetInnerHTML={{ __html: pageContext.content }}></div>
+          <h1 style={{"textAlign": "center", "paddingTop": "50px"}} dangerouslySetInnerHTML={{ __html: pageContext.title }} />
+          <div style={{"padding": "0px 20px"}} dangerouslySetInnerHTML={{ __html: pageContext.content }} />
           <StaticQuery
             query={graphql`
               {
@@ -54,6 +54,10 @@ export default ({ pageContext }) => {
     </>
   )
 }
+
+const textContent = styled.div`
+padding: op 5px;
+`
 
 const ReadMoreBtn = styled.button`
   color: white;
