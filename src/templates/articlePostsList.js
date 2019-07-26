@@ -20,8 +20,13 @@ const PagenumberWrapper = styled.div`
 `
 
 const Pagenumber = styled(Link)`
+  color: black;
   display: block;
   padding: 8px 16px;
+
+  &:hover{
+    color: black
+  }
 `
 
 export default ({ pageContext }) => {

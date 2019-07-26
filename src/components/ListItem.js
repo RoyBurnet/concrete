@@ -31,6 +31,7 @@ const GridContainerThumbnailImage = styled.img`
 `
 
 const GridContainerTextExcerpt = styled.div`
+  color: black;
   width: 100%;
   padding: 6px;
   flex: 2;
@@ -41,7 +42,6 @@ const ExcerptContent = styled.div`
 `
 
 const CardItemReadMoreBtn = styled.button`
-  color: black;
   border-radius: 6px;
   text-decoration: none;
   text-decoration: none;
@@ -60,6 +60,7 @@ const LinkTag = styled(Link)`
 
 const ListItem = props => {
   return (
+    <LinkTag to={`/article/${props.data.node.slug}`}>
     <GridContainerItemCard>
       <GridContainerThumbnailImage
         src={props.data.node.featured_media.source_url}
@@ -73,11 +74,9 @@ const ListItem = props => {
               : props.data.node.excerpt,
           }}
         />
-        <CardItemReadMoreBtn>
-          <LinkTag to={`/article/${props.data.node.slug}`}>Read</LinkTag>
-        </CardItemReadMoreBtn>
       </GridContainerTextExcerpt>
     </GridContainerItemCard>
+  </LinkTag>
   )
 }
 
