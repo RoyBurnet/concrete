@@ -122,7 +122,8 @@ module.exports = {
          "**/*/*/menus",
          "**/*/*/article",
          "**/*/*/about",
-         "**/*/*/curated-sounds"
+         "**/*/*/curated-sounds",
+         "**/*/*/for-the-culture-magazine"
         //  "**/*/*/portfolio",
        ],
        // Blacklisted routes using glob patterns

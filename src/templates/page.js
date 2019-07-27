@@ -2,6 +2,7 @@ import React from "react"
 import Layout from "../components/layout"
 import Banner from "../components/Banner"
 import StoreSection from "../components/StoreSection"
+import styled from "styled-components"
 import backgroundBanner from "../images/banner4.jpg"
 
 export default ({ pageContext }) => (

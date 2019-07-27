@@ -1,6 +1,8 @@
 import React from "react"
+import {Link} from 'gatsby'
 import styled from "styled-components"
 import bookImg from "../images/book.png"
+
 
 const StoreWrapper = styled.div`
   padding: 0px 20px;
@@ -65,7 +67,7 @@ const StoreSection = () => {
         Duis aute irure dolor in reprehenderit in voluptate velit esse.
       </p>
       </StoreText>
-      <OrderBtn>ORDER HERE</OrderBtn>
+      <Link to="/for-the-culture-magazine/"><OrderBtn>ORDER HERE</OrderBtn></Link>
     </StoreWrapper>
   )
 }
