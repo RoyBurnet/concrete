@@ -120,7 +120,9 @@ module.exports = {
          "**/*/*/taxonomies",
          "**/*/*/users",
          "**/*/*/menus",
-         "**/*/*/article"
+         "**/*/*/article",
+         "**/*/*/about",
+         "**/*/*/curated-sounds"
         //  "**/*/*/portfolio",
        ],
        // Blacklisted routes using glob patterns

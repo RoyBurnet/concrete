@@ -61,9 +61,9 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create Page pages.
         const pageTemplate = path.resolve("./src/templates/page.js")
-        // const portfolioUnderContentTemplate = path.resolve(
-        //   "./src/templates/portfolioUnderContent.js"
-        // )
+        const portfolioUnderContentTemplate = path.resolve(
+          "./src/templates/index.js"
+        )
         // We want to create a detailed page for each
         // page node. We'll just use the WordPress Slug for the slug.
         // The Page ID is prefixed with 'PAGE_'
@@ -79,7 +79,7 @@ exports.createPages = ({ graphql, actions }) => {
             // can query data specific to each page.
             path: `/${edge.node.slug}/`,
             component: slash(
-              edge.node.template === "portfolio_under_content.php"
+              edge.node.template === "index_components.php"
                 ? portfolioUnderContentTemplate
                 : pageTemplate
             ),
@@ -89,6 +89,7 @@ exports.createPages = ({ graphql, actions }) => {
       })
       // ==== END PAGES ====
 
+     
       // ==== ARTICLE POSTS====
       .then(() => {
         graphql(
