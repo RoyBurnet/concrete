@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "styled-components"
-import bookImg from "../images/book.png"
+import eventImg from "../images/event.jpg"
 
 const StoreWrapper = styled.div`
   padding: 0px 20px;
@@ -13,10 +13,9 @@ const StoreWrapper = styled.div`
   text-align: center;
 `
 
-const StoreImage = styled.img`
+const EventBanner= styled.img`
   padding: 0px 0px;
   height: 500px;
-  max-width: 350px;
   align-self: center;
   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
 `
@@ -49,11 +48,11 @@ const OrderBtn = styled.button`
 
 const StoreText = styled.div``
 
-const StoreSection = () => {
+const EventSection = () => {
   return (
     <StoreWrapper>
-      <h2>FOR THE CULURE MAGAZINE OUT NOW !</h2>
-        <StoreImage src={bookImg} />
+      <h2> LA HAINE ART FESTIVAL  !</h2>
+        <EventBanner src={eventImg} />
         <StoreText>
           <p>
             consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -64,12 +63,12 @@ const StoreSection = () => {
           </p>
         </StoreText>
       <div>
-        <Link to="/for-the-culture-magazine/">
-          <OrderBtn>ORDER HERE</OrderBtn>
+        <Link to="/events/">
+          <OrderBtn>NOTABLE EVENTS</OrderBtn>
         </Link>
       </div>
     </StoreWrapper>
   )
 }
 
-export default StoreSection
+export default EventSection

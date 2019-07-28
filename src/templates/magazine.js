@@ -20,7 +20,7 @@ export default ({ pageContext }) => (
       <MagazineSection />
       <EmailForm />
       <div
-        style={{ padding: "0px 20px" }}
+        style={{ padding: "0px 20px 150px 20px" }}
         dangerouslySetInnerHTML={{
           __html: pageContext.content,
         }}

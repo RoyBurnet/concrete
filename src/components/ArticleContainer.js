@@ -4,6 +4,22 @@ import { Link } from "gatsby"
 
 import ArticleItem from "./ArticleItem"
 
+
+const ArticleContainer = () => {
+  return (
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      <ArticleItemsWrapperTitle>Articles</ArticleItemsWrapperTitle>
+      <ArticleItemsWrapper>
+        <ArticleItem />
+      </ArticleItemsWrapper>
+     <div><ReadMoreLink to={"/article"}> <ArticleBtn>ALL ARTICLES</ArticleBtn></ReadMoreLink></div>
+    </div>
+  )
+}
+
+export default ArticleContainer
+
+
 const ArticleItemsWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -53,16 +69,3 @@ const ReadMoreLink = styled(Link)`
   text-align: center;
 `
 
-const ArticleContainer = () => {
-  return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <ArticleItemsWrapperTitle>Articles</ArticleItemsWrapperTitle>
-      <ArticleItemsWrapper>
-        <ArticleItem />
-      </ArticleItemsWrapper>
-      <ReadMoreLink to={"/article"}> <ArticleBtn>ALL ARTICLES</ArticleBtn></ReadMoreLink>
-    </div>
-  )
-}
-
-export default ArticleContainer

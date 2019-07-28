@@ -59,19 +59,22 @@ exports.createPages = ({ graphql, actions }) => {
           reject(result.errors)
         }
 
-        // Create Page pages.
+        // Create Page pages templates
 
         const renderComponentFromTemplate = {
           "": path.resolve("./src/templates/page.js"),
           "index_components.php": path.resolve("./src/templates/index.js"),
           "magazine_components.php": path.resolve("./src/templates/magazine.js")
         }
+
+        // Create Page pages.
+
         // We want to create a detailed page for each
         // page node. We'll just use the WordPress Slug for the slug.
         // The Page ID is prefixed with 'PAGE_'
         _.each(result.data.allWordpressPage.edges, edge => {
           // Gatsby uses Redux to manage its internal state.
-          // Plugins and sites can use functions like "createPage"
+          // Plugins and sites can use functions like "createPage" 
           // to interact with Gatsby.
 
           createPage({

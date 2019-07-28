@@ -5,14 +5,8 @@ import StoreSection from "../components/StoreSection"
 import styled from "styled-components"
 import backgroundBanner from "../images/banner4.jpg"
 import EmailForm from "../components/EmailForm"
+import {Link} from "gatsby"
 
-const Image = styled.img`
-  padding: 0px 0px;
-  height: 500px;
-  max-width: 350px;
-  /* align-self: center; */
-  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
-`
 
 export default ({ pageContext }) => (
   <>
@@ -29,6 +23,34 @@ export default ({ pageContext }) => (
           __html: pageContext.content,
         }}
       ></div>
+              <div>
+          <Link to="/">
+            <Btn>Back</Btn>
+          </Link>
+        </div>
     </Layout>
   </>
 )
+
+const Btn = styled.button`
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  border: none;
+  background-color: #d8d8d8;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
+  margin-bottom: 150px;
+  align-self: center;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`
+
+const Image = styled.img`
+  padding: 0px 0px;
+  height: 500px;
+  max-width: 350px;
+  /* align-self: center; */
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
+`

@@ -65,7 +65,7 @@ const ArticleItem = () => {
     <StaticQuery
       query={graphql`
         {
-          allWordpressWpArticle {
+          allWordpressWpArticle(limit: 6) {
             edges {
               node {
                 id
