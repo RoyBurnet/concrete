@@ -1,5 +1,6 @@
 import React from "react"
 import styled from "styled-components"
+import Img from "gatsby-image"
 import backgroundBanner from "../images/banner4.jpg"
 
 const BannerWrapper = styled.div`

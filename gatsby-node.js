@@ -60,7 +60,7 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         // Create Page pages templates
-
+        
         const renderComponentFromTemplate = {
           "": path.resolve("./src/templates/page.js"),
           "index_components.php": path.resolve("./src/templates/index.js"),
