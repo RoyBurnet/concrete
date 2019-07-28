@@ -34,9 +34,10 @@ const MenuItem = styled(Link)`
   text-decoration: none;
 
   &:hover {
-    color: black;
+    color: gray;
     text-decoration: none;
   }
+  
 `
 
 // import SiteInfo from "./SiteInfo"
@@ -71,7 +72,7 @@ const MainMenu = () => (
               <MenuItemWrapper className="mr-auto">
                 {props.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(
                   item => (
-                    <MenuItem to={item.object_slug} key={item.title}>
+                    <MenuItem to={item.object_slug} key={item.title}  activeStyle={{fontWeight: "700" }}>
                       {item.title}
                     </MenuItem>
                   )
