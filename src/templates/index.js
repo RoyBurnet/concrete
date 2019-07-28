@@ -18,10 +18,10 @@ export default ({ pageContext }) => (
       <MusicPlayer />
       <hr />
       <br />
-      <StoreSection />
+      <EventSection />
       <hr />
       <br />
-      <EventSection />
+      <StoreSection />
     </Layout>
   </>
 )
