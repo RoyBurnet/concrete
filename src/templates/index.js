@@ -13,13 +13,10 @@ export default ({ pageContext }) => (
     <Layout>
     <Banner background={pageContext.featured_media.source_url} />
       <ArticleContainer />
-  
-      <br />
-      {/* <MusicPlayer /> */}
-      {/* <EventSection /> */}
+      <MusicPlayer />
+      <EventSection />
 
-      <br />
-      <StoreSection />
+      {/* <StoreSection /> */}
     </Layout>
   </>
 )

@@ -3,6 +3,29 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 import eventImg from "../images/event.jpg"
 
+const EventSection = () => {
+  return (
+    <StoreWrapper>
+      <h2> LA HAINE ART FESTIVAL  !</h2>
+        <EventBanner src={eventImg} />
+        <StoreText>
+          <p>
+            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+            esse.
+          </p>
+        </StoreText>
+      <div>
+        <Link to="/events/">
+          <OrderBtn>NOTABLE EVENTS</OrderBtn>
+        </Link>
+      </div>
+    </StoreWrapper>
+  )
+}
+
 const StoreWrapper = styled.div`
   padding: 0px 20px;
   margin-top: 50px 0px;
@@ -47,28 +70,5 @@ const OrderBtn = styled.button`
 `
 
 const StoreText = styled.div``
-
-const EventSection = () => {
-  return (
-    <StoreWrapper>
-      <h2> LA HAINE ART FESTIVAL  !</h2>
-        <EventBanner src={eventImg} />
-        <StoreText>
-          <p>
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse.
-          </p>
-        </StoreText>
-      <div>
-        <Link to="/events/">
-          <OrderBtn>NOTABLE EVENTS</OrderBtn>
-        </Link>
-      </div>
-    </StoreWrapper>
-  )
-}
 
 export default EventSection

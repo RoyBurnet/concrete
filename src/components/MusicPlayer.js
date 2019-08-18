@@ -1,38 +1,46 @@
 import React, { Component } from "react"
-import {Link} from 'gatsby'
-
-import MixCloudPlayer from "react-player/lib/players/Mixcloud"
+import { Link } from "gatsby"
+import SpotifyPlayer from "react-spotify-player"
 
 import styled from "styled-components"
-
 
 class MusicPlayer extends Component {
   render() {
     return (
-      <PlayerWrapper>
-        <h2>Curated Sounds: Mix of the Week !</h2>
-        <MixCloudPlayer
-          url="https://www.mixcloud.com/whosampled/notorious-big-ready-to-die-20th-anniversary-mixtape-mixed-by-chris-read/"
-          playing
-        />
-        <div>
-          <Link to="/curated-sounds/">
+      <>
+        <SectionTitle>CURRATED SOUNDS</SectionTitle>
+        <PlayerWrapper>
+          {/* <Link to="/curated-sounds/">
             <Btn>CURATED SOUNDS</Btn>
           </Link>
-        </div>
-      </PlayerWrapper>
+           */}
+          <SpotifyPlayer
+            uri="https://open.spotify.com/artist/3sqcegx4uDKLAD4tIEPg6v"
+            theme="black"
+            view="coverart"
+          />
+        </PlayerWrapper>
+      </>
     )
   }
 }
 
-export default MusicPlayer
+const SectionTitle = styled.span`
+  font-family: couture;
+  color: #ff0099;
+  margin: 0;
+  font-size: 40px;
+`
 
+export default MusicPlayer
 
 const PlayerWrapper = styled.div`
   display: flex;
-  margin-bottom: 150px;
+  height: 400px;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 50px;
+  /* background-color: #F3F3F4; */
 `
 
 const Btn = styled.button`
