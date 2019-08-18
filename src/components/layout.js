@@ -4,22 +4,39 @@ import MainMenu from "./MainMenu"
 
 import styled, { createGlobalStyle } from "styled-components"
 
+
+const Layout = ({ children }) => (
+  <>
+    <GlobalStyles />
+    <LayoutWrapper>
+    <MainMenu />
+    {children}
+    <Footer/>
+    </LayoutWrapper>
+  </>
+)
+
 const GlobalStyles = createGlobalStyle`
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:300,500i,700,700i,900&display=swap');
+
+@font-face {
+  font-family: "couture";
+  src: url('../couture-bldit.otf');
+}
 
   body, html{
     font-family: 'Roboto', sans-serif;
     margin: 0 !important;
     padding: 0 !important;
-    min-height: 100%;
+
 
   }
 `
 
 const LayoutWrapper = styled.div`
 overflow: hidden;
-  max-width: 1200px;
+  max-width: 930px;
   margin: auto;
   min-height: 100%;
 `
@@ -28,21 +45,10 @@ const Footer = styled.footer`
   width: 100%;
   height: 50px;
   background-color: white;
-  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
-  bottom: 0;
+  bottom: 100%;
   display: flex;
   margin-top: auto;
-  position: fixed
-;
+  background-color: #FF0099;
 `
-
-const Layout = ({ children }) => (
-  <>
-    <GlobalStyles />
-    <MainMenu />
-    <LayoutWrapper>{children}</LayoutWrapper>
-    <Footer></Footer>
-  </>
-)
 
 export default Layout

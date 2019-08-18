@@ -5,40 +5,9 @@ import styled from "styled-components"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 
-import logo from "../images/logo.png"
+import logo from "../images/cblogo.svg"
 
 import "bootstrap/dist/css/bootstrap.css"
-
-const MenuWrapper = styled(Navbar)`
-    box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
-`
-
-const MenuLogo = styled.img`
-  height: 30px;
-  width: auto;
-  margin-bottom: 10px;
-`
-
-const MenuItemWrapper = styled(Nav)`
-  text-align: center;
-  max-width: 1046px;
-  margin: 0 auto;
-  display: flex;
-  width: 100%;
-`
-
-const MenuItem = styled(Link)`
-  color: black;
-  justify-content: center;
-  padding: 8px 16px;
-  text-decoration: none;
-
-  &:hover {
-    color: gray;
-    text-decoration: none;
-  }
-  
-`
 
 // import SiteInfo from "./SiteInfo"
 
@@ -72,7 +41,7 @@ const MainMenu = () => (
               <MenuItemWrapper className="mr-auto">
                 {props.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(
                   item => (
-                    <MenuItem to={item.object_slug} key={item.title}  activeStyle={{fontWeight: "700" }}>
+                    <MenuItem to={item.object_slug} key={item.title}  activeStyle={{color: '#FF0099' }}>
                       {item.title}
                     </MenuItem>
                   )
@@ -85,5 +54,40 @@ const MainMenu = () => (
     />
   </>
 )
+
+const MenuWrapper = styled(Navbar)`
+    /* box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08); */
+    height: 155px;
+    flex-direction: column;
+`
+
+const MenuLogo = styled.img`
+  height: 50px;
+  width: auto;
+  margin: 10px;
+`
+
+const MenuItemWrapper = styled(Nav)`
+  text-align: center;
+  max-width: 1046px;
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+`
+
+const MenuItem = styled(Link)`
+  color: black;
+  justify-content: center;
+  padding: 8px 40px;
+  text-decoration: none;
+  font-family: couture;
+  
+
+  &:hover {
+    color: gray;
+    text-decoration: none;
+  }
+  
+`
 
 export default MainMenu

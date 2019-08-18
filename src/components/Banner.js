@@ -3,14 +3,34 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import backgroundBanner from "../images/banner4.jpg"
 
+const Banner = props => {
+
+  return (
+    <BannerWrapper style={{backgroundImage: `url(${props.background})`}}>
+      <BannerCTAContainer>
+        <Title>
+          {" "}
+          <strong>
+            <h3>{props.title}</h3>
+          </strong>
+        </Title>
+        {/* <h3>Online Street Magazine</h3>
+        <p>accelerating urban culture</p> */}
+      </BannerCTAContainer>
+    </BannerWrapper>
+  )
+}
+
 const BannerWrapper = styled.div`
   display: flex;
   max-width: 100%;
   height: 500px;
+  margin-top: 170px;
   /* background: url(${backgroundBanner}); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
+  margin-bottom: 100px;
 `
 
 const BannerImage = styled.img`
@@ -34,23 +54,5 @@ const Title = styled.div`
   font-style: italic;
   color: white;
 `
-
-const Banner = props => {
-
-  return (
-    <BannerWrapper style={{backgroundImage: `url(${props.background})`}}>
-      <BannerCTAContainer>
-        <Title>
-          {" "}
-          <strong>
-            <h3>{props.title}</h3>
-          </strong>
-        </Title>
-        {/* <h3>Online Street Magazine</h3>
-        <p>accelerating urban culture</p> */}
-      </BannerCTAContainer>
-    </BannerWrapper>
-  )
-}
 
 export default Banner
