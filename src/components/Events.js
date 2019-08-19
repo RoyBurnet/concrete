@@ -28,7 +28,7 @@ const EventSection = () => {
 
 const StoreWrapper = styled.div`
   padding: 0px 20px;
-  margin-top: 50px 0px;
+  margin-top: 150;
   width: 100%;
   display: flex;
   flex-direction: column;

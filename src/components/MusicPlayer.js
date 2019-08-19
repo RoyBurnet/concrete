@@ -14,33 +14,44 @@ class MusicPlayer extends Component {
             <Btn>CURATED SOUNDS</Btn>
           </Link>
            */}
-          <SpotifyPlayer
+          {/* <SpotifyPlayer
             uri="https://open.spotify.com/artist/3sqcegx4uDKLAD4tIEPg6v"
             theme="black"
-            view="coverart"
-          />
+            view="coverart"d
+          /> */}
+
+          <AudioContent/> 
+          <AudioContent/> 
+          <AudioContent/> 
+
         </PlayerWrapper>
       </>
     )
   }
 }
 
-const SectionTitle = styled.span`
+const AudioContent = styled.div`
+ height: 250px;
+ width: 250px;
+ background-color: orange;
+`
+
+const SectionTitle = styled.div`
   font-family: couture;
   color: #ff0099;
   margin: 0;
   font-size: 40px;
+  margin-top: 50px;
 `
-
-export default MusicPlayer
 
 const PlayerWrapper = styled.div`
   display: flex;
   height: 400px;
-  flex-direction: column;
+justify-content: space-around;
   align-items: center;
   margin-bottom: 50px;
-  /* background-color: #F3F3F4; */
+  margin-top: 50px;
+  background-color: #F3F3F4;
 `
 
 const Btn = styled.button`
@@ -58,3 +69,5 @@ const Btn = styled.button`
     transform: scale(1.1);
   }
 `
+
+export default MusicPlayer
