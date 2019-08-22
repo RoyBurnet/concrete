@@ -11,7 +11,7 @@ const Layout = ({ children }) => (
     <LayoutWrapper>
     <MainMenu />
     {children}
-    <Footer/>
+    {/* <Footer/> */}
     </LayoutWrapper>
   </>
 )

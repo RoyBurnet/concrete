@@ -5,54 +5,101 @@ import eventImg from "../images/event.jpg"
 
 const EventSection = () => {
   return (
-    <StoreWrapper>
-      <h2> LA HAINE ART FESTIVAL  !</h2>
-        <EventBanner src={eventImg} />
-        <StoreText>
-          <p>
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse.
-          </p>
-        </StoreText>
+    <EventsWrapper>
+      <div>
+        <Event1Cover></Event1Cover>
+        <Event1 />
+      </div>
+
+      <Event3Wrapper>
+        <Event3Cover></Event3Cover>
+        <Event3 />
+      </Event3Wrapper>
+
+      {/* <div style={{marginTop: '50px'}}>
+        <Event2Cover></Event2Cover>
+        <Event2 />
+      </div> */}
+
+      {/* style={{marginLeft: '200px', marginTop: '70px'}} */}
+      {/* 
       <div>
         <Link to="/events/">
           <OrderBtn>NOTABLE EVENTS</OrderBtn>
         </Link>
-      </div>
-    </StoreWrapper>
+      </div> */}
+    </EventsWrapper>
   )
 }
 
-const StoreWrapper = styled.div`
+const Event3Wrapper = styled.div`
+  width: 465px;
+  height: 339px;
+  background-color: #d8d8d8;
+  margin-bottom: 20px;
+  margin-top: 50px;
+  margin-left: 18px;
+`
+
+const Event1Cover = styled.div`
+  background-color: rgba(255, 255, 255, 0.72);
+  opacity: 0.5;
+  width: 465px;
+  height: 339px;
+  position: absolute;
+  z-index: 10;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+`
+const Event2Cover = styled.div`
+  background-color: rgba(255, 255, 255, 0.72);
+  opacity: 0.5;
+  width: 368px;
+  height: 328px;
+  position: absolute;
+  z-index: 10;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+`
+const Event3Cover = styled.div`
+  background-color: rgba(255, 255, 255, 0.72);
+  opacity: 0.5;
+  max-width: 200px;
+  height: 339px;
+  position: absolute;
+  z-index: 10;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+`
+
+const EventsWrapper = styled.div`
   padding: 0px 20px;
   margin-top: 150;
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   position: relative;
   text-align: center;
 `
 
-const EventBanner= styled.img`
-  padding: 0px 0px;
-  height: 500px;
-  align-self: center;
-  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
+const Event1 = styled.div`
+  width: 465px;
+  height: 339px;
+  background-color: #d8d8d8;
+  margin-bottom: 20px;
 `
 
-const StoreBtn = styled.button`
+const Event2 = styled.div`
+  width: 368px;
+  height: 328px;
   background-color: #d8d8d8;
-  width: 140px;
-  height: 40px;
-  border-radius: 16px;
-  color: white;
-  margin-bottom: 40px;
-  margin-top: 20px;
-  align-self: center;
+  margin-bottom: 20px;
 `
+
+const Event3 = styled.div`
+  max-width: 200px;
+  height: 339px;
+  background-color: #d8d8d8;
+  margin-bottom: 20px;
+`
+
 const OrderBtn = styled.button`
   color: white;
   border-radius: 6px;
@@ -68,7 +115,5 @@ const OrderBtn = styled.button`
     transform: scale(1.1);
   }
 `
-
-const StoreText = styled.div``
 
 export default EventSection
