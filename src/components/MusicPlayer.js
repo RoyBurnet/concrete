@@ -4,6 +4,10 @@ import SpotifyPlayer from "react-spotify-player"
 
 import styled from "styled-components"
 
+import imgA from "../images/Image 79.png"
+import imgB from "../images/Image 80.png"
+import imgC from "../images/Image 81.png"
+
 class MusicPlayer extends Component {
   render() {
     return (
@@ -20,10 +24,9 @@ class MusicPlayer extends Component {
             view="coverart"d
           /> */}
 
-          <AudioContent/> 
-          <AudioContent/> 
-          <AudioContent/> 
-
+          <AudioContent><AudioImage src={imgA}/></AudioContent> 
+          <AudioContent><AudioImage src={imgB}/></AudioContent> 
+          <AudioContent><AudioImage src={imgC}/></AudioContent>
         </PlayerWrapper>
       </>
     )
@@ -34,6 +37,10 @@ const AudioContent = styled.div`
  height: 250px;
  width: 250px;
  background-color: orange;
+`
+
+const AudioImage = styled.img`
+width: 100%;
 `
 
 const SectionTitle = styled.div`
