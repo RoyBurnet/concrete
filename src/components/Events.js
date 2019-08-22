@@ -33,12 +33,28 @@ const EventSection = () => {
 }
 
 const Event3Wrapper = styled.div`
-  width: 465px;
-  height: 339px;
+  width: 300px;
+  height: 300px;
+  /* background-color: #d8d8d8; */
+  margin-bottom: 20px;
+  margin-top: 80px;
+  margin-left: 100px;
+`
+const Event3Cover = styled.div`
+  background-color: rgba(255, 255, 255, 0.72);
+  opacity: 0.5;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  z-index: 10;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+`
+
+const Event3 = styled.div`
+  max-width: 300px;
+  height: 300px;
   background-color: #d8d8d8;
   margin-bottom: 20px;
-  margin-top: 50px;
-  margin-left: 18px;
 `
 
 const Event1Cover = styled.div`
@@ -59,15 +75,7 @@ const Event2Cover = styled.div`
   z-index: 10;
   clip-path: polygon(0 0, 0 100%, 100% 0);
 `
-const Event3Cover = styled.div`
-  background-color: rgba(255, 255, 255, 0.72);
-  opacity: 0.5;
-  max-width: 200px;
-  height: 339px;
-  position: absolute;
-  z-index: 10;
-  clip-path: polygon(0 0, 0 100%, 100% 0);
-`
+
 
 const EventsWrapper = styled.div`
   padding: 0px 20px;
@@ -93,12 +101,7 @@ const Event2 = styled.div`
   margin-bottom: 20px;
 `
 
-const Event3 = styled.div`
-  max-width: 200px;
-  height: 339px;
-  background-color: #d8d8d8;
-  margin-bottom: 20px;
-`
+
 
 const OrderBtn = styled.button`
   color: white;
