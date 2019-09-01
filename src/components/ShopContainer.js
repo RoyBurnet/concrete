@@ -1,7 +1,5 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
-import SpotifyPlayer from "react-spotify-player"
-
 import styled from "styled-components"
 
 import imgA from "../images/shirt.jpg"
@@ -16,15 +14,7 @@ class ShopContainer extends Component {
             <Btn>CURATED SOUNDS</Btn>
           </Link>
            */}
-          {/* <SpotifyPlayer
-            uri="https://open.spotify.com/artist/3sqcegx4uDKLAD4tIEPg6v"
-            theme="black"
-            view="coverart"d
-          /> */}
-
           <AudioContent><AudioImage src={imgA}/></AudioContent> 
-          {/* <AudioContent><AudioImage src={imgB}/></AudioContent>  */}
-          {/* <AudioContent><AudioImage src={imgC}/></AudioContent> */}
         </PlayerWrapper>
       </>
     )

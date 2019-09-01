@@ -1,8 +1,9 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout2 from "../components/layout2"
 import styled from "styled-components"
 import Banner from "../components/Banner"
 import GridContainer from "../components/GridContainer"
+
 
 import { graphql, StaticQuery, Link } from "gatsby"
 
@@ -10,53 +11,58 @@ export default ({ pageContext }) => {
   return (
     <>
       <div>
-        <Layout>
-          <br />
-          <br />
-          <br />
-          <Banner background={pageContext.featured_media.source_url} />
-          <h1 style={{"textAlign": "center", "paddingTop": "50px"}} dangerouslySetInnerHTML={{ __html: pageContext.title }} />
-          <div style={{"padding": "0px 20px"}} dangerouslySetInnerHTML={{ __html: pageContext.content }} />
-          <StaticQuery
-            query={graphql`
-              {
-                allWordpressWpArticle(limit: 3) {
-                  edges {
-                    node {
-                      excerpt
-                      wordpress_id
-                      date(formatString: "Do MMM YYYY HH:mm")
-                      title
-                      slug
-                      featured_media {
-                        source_url
-                      }
-                    }
-                  }
-                }
-              }
-            `}
-            render={props => (
-              <div>
-                <GridContainer data={props.allWordpressWpArticle.edges} />
-              </div>
-            )}
-          />
+        <Layout2>
+          <div>
+            <Banner background={pageContext.featured_media.source_url} />
+            <Content>
+              <TitleText
+                dangerouslySetInnerHTML={{ __html: pageContext.title }}
+              />
 
-          <ReadMoreWrapper>
+          <div
+            dangerouslySetInnerHTML={{ __html: pageContext.content }}
+          />
+            </Content>
+          </div>
+
+          {/* <ReadMoreWrapper>
             <ReadMoreLink to={"/article"}>
               {" "}
               <ReadMoreBtn>More</ReadMoreBtn>
             </ReadMoreLink>
-          </ReadMoreWrapper>
-        </Layout>
+          </ReadMoreWrapper> */}
+
+        </Layout2>
       </div>
     </>
   )
 }
 
+const Content = styled.div`
+/* position:absolute;  */
+/* z-index: 10;
+top: 65%;
+left: 7%; */
+margin-left: 100px;
+font-family: Arial, Helvetica, sans-serif;
+max-width: 600px;
+color: #FF0099;
+
+`
+
+const TitleText = styled.h1`
+  font-size: 110px;
+  font-weight: bold;
+  line-height: 0.8;
+  position: absolute;
+  z-index: 10;
+  top: 70%;
+  left: 7%;
+  max-width: 600px;
+`
+
 const textContent = styled.div`
-padding: op 5px;
+  padding: op 5px;
 `
 
 const ReadMoreBtn = styled.button`
