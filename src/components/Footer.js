@@ -21,7 +21,7 @@ class Footer extends Component {
             view="coverart"d
           /> */}
 
-          <AudioContent><AudioImage/></AudioContent> 
+          <AudioContent><h2 style={{margin: "20px", color: "#ff0099", fontWeight: "bold"}}>MELD JE NU AAN VOOR DE NIEUWSBRIEF</h2></AudioContent> 
         </PlayerWrapper>
       </>
     )
@@ -34,9 +34,6 @@ const AudioContent = styled.div`
  background-color: #F9F9FA;
 `
 
-const AudioImage = styled.img`
-width: 100%;
-`
 
 const SectionTitle = styled.div`
   font-family: couture;
