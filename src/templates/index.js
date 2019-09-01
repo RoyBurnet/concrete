@@ -5,6 +5,7 @@ import Banner from "../components/Banner"
 import StoreSection from "../components/StoreSection"
 import MusicPlayer from "../components/MusicPlayer"
 import EventSection from "../components/Events"
+import ShopContainer from '../components/ShopContainer'
 
 // import backgroundBanner from "../images/banner4.jpg"
 
@@ -16,7 +17,7 @@ export default ({ pageContext }) => (
       <MusicPlayer />
       <EventSection />
 
-      {/* <StoreSection /> */}
+      <ShopContainer />
     </Layout>
   </>
 )
