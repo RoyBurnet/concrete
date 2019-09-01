@@ -3,7 +3,8 @@ import Layout2 from "../components/layout2"
 import styled from "styled-components"
 import Banner from "../components/Banner"
 import GridContainer from "../components/GridContainer"
-
+import ArticleSubContainer from "../components/ArticleSubContainer"
+import Events from "../components/Events"
 
 import { graphql, StaticQuery, Link } from "gatsby"
 
@@ -19,9 +20,7 @@ export default ({ pageContext }) => {
                 dangerouslySetInnerHTML={{ __html: pageContext.title }}
               />
 
-          <div
-            dangerouslySetInnerHTML={{ __html: pageContext.content }}
-          />
+              <div dangerouslySetInnerHTML={{ __html: pageContext.content }} />
             </Content>
           </div>
 
@@ -32,22 +31,26 @@ export default ({ pageContext }) => {
             </ReadMoreLink>
           </ReadMoreWrapper> */}
 
+          <ArticleSubContainer />
+
+        <EventContainer>
+          <Events />
+        </EventContainer>
         </Layout2>
       </div>
     </>
   )
 }
 
-const Content = styled.div`
-/* position:absolute;  */
-/* z-index: 10;
-top: 65%;
-left: 7%; */
-margin-left: 100px;
-font-family: Arial, Helvetica, sans-serif;
-max-width: 600px;
-color: #FF0099;
+const EventContainer = styled.div`
+  margin-left: 200px;
+`
 
+const Content = styled.div`
+  margin-left: 100px;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 600px;
+  color: #ff0099;
 `
 
 const TitleText = styled.h1`

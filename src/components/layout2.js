@@ -1,8 +1,12 @@
 import React from "react"
 
 import MainMenu from "./MainMenu"
+import Footer from "../components/Footer"
+// import ArticleSubContainer from './ArticleSubContainer'
+// import Events from "./Events"
 
 import styled, { createGlobalStyle } from "styled-components"
+
 
 
 const Layout2 = ({ children }) => (
@@ -11,7 +15,7 @@ const Layout2 = ({ children }) => (
     <LayoutWrapper>
     <MainMenu />
     {children}
-    {/* <Footer/> */}
+    <Footer/>
     </LayoutWrapper>
   </>
 )
@@ -29,8 +33,6 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Roboto', sans-serif;
     margin: 0 !important;
     padding: 0 !important;
-
-
   }
 `
 
@@ -41,14 +43,14 @@ overflow: hidden;
   min-height: 100%;
 `
 
-const Footer = styled.footer`
-  width: 100%;
-  height: 50px;
-  background-color: white;
-  bottom: 100%;
-  display: flex;
-  margin-top: auto;
-  background-color: #FF0099;
-`
+// const Footer = styled.footer`
+//   width: 100%;
+//   height: 50px;
+//   background-color: white;
+//   bottom: 100%;
+//   display: flex;
+//   margin-top: auto;
+//   background-color: #FF0099;
+// `
 
 export default Layout2
