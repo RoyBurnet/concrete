@@ -57,15 +57,6 @@ const ArticleItem = () => {
 }
 
 const ArticleThumbnailCover = styled.div`
-/* width: 0;
-height: 200px; */
-/* height: 191px;
-width: 19.3%; */
-/* opacity: 0.5;
-position:absolute;  
-z-index: 10;
-border-top: 100px solid  #FF0099;
-border-right: 100px solid transparent; */
 background-color: #FF0099;
 opacity: 0.5;
 height: 191px;
@@ -77,28 +68,15 @@ clip-path: polygon(0 0, 0 100%, 100% 0);
 `
 
 const ArticleItemCard = styled.div`
-  /* width: 276px; */
   height: 191px;
-  /* display: flex;
-  flex-direction: column; */
-  /* align-items: center;
-  overflow: hidden; */
   margin-bottom: 50px;
 
 `
 
 const ArticleThumbnailImage = styled.img`
   width: 100%;
-  /* max-height: 180px; */
-  /* flex: 1; */
 `
 
-// const ArticleTextExcerpt = styled.div`
-//   max-width: 100%;
-//   padding: 6px;
-//   flex: 2;
-//   color: black;
-// `
 
 const ArticleReadMoreBtn = styled.div`
   color: black;

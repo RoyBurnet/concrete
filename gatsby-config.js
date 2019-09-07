@@ -123,6 +123,7 @@ module.exports = {
           "**/*/*/menus",
           "**/*/*/article",
           "**/*/*/about",
+          "**/*/*/contact",
           "**/*/*/curated-sounds",
           "**/*/*/for-the-culture-magazine",
           //  "**/*/*/portfolio",

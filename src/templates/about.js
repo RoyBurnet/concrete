@@ -1,13 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import AboutBanner from "../components/AboutBanner"
-import StoreSection from "../components/StoreSection"
 import styled from "styled-components"
-import backgroundBanner from "../images/banner4.jpg"
-import EmailForm from "../components/EmailForm"
-import { Link } from "gatsby"
 import EventSection from "../components/Events"
-import ArticleSubContainer from "../components/ArticleSubContainer"
 import Footer from "../components/Footer"
 
 export default ({ pageContext }) => (

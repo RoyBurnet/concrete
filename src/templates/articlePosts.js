@@ -9,7 +9,6 @@ import Events from "../components/Events"
 import { graphql, StaticQuery, Link } from "gatsby"
 
 export default ({ pageContext }) => {
-  // const title = <div>dangerouslySetInnerHTML={{ __html: pageContext.title }}</div>
   console.log(pageContext)
   return (
     <>
@@ -40,7 +39,6 @@ export default ({ pageContext }) => {
 }
 
 const TextHolder = styled.div`
-  /* position: absolute; */
 `
 
 const Title = styled.div`
@@ -73,10 +71,6 @@ const TitleText = styled.h1`
   font-size: 110px;
   font-weight: bold;
   line-height: 0.8;
-  /* position: absolute;
-  z-index: 10;
-  top: 70%;
-  left: 7%; */
 
   max-width: 600px;
 `

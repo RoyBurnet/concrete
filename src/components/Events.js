@@ -124,21 +124,4 @@ const Event1 = styled.div`
   margin-bottom: 20px;
 `
 
-
-// const OrderBtn = styled.button`
-//   color: white;
-//   border-radius: 6px;
-//   text-decoration: none;
-//   border: none;
-//   background-color: #d8d8d8;
-//   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
-//   margin-bottom: 150px;
-//   /* max-width: 300px; */
-//   align-self: center;
-
-//   &:hover {
-//     transform: scale(1.1);
-//   }
-// `
-
 export default EventSection

@@ -25,15 +25,4 @@ const BannerWrapper = styled.div`
   /* margin-bottom: 100px; */
 `
 
-// const AboutContent = styled.div`
-//   width: 700px;
-//   height: 500px;
-//   background-color: orangered;
-//   z-index: 10;
-//   position: absolute;
-//   left: 50%;
-//   transform: translate(-50%, -50%);
-
-// `
-
 export default AboutBanner

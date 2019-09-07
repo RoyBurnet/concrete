@@ -47,6 +47,10 @@ exports.createPages = ({ graphql, actions }) => {
                 featured_media {
                   source_url
                 }
+                author{
+                  name
+                  description
+                }
               }
             }
           }
@@ -65,7 +69,8 @@ exports.createPages = ({ graphql, actions }) => {
           "": path.resolve("./src/templates/page.js"),
           "index_components.php": path.resolve("./src/templates/index.js"),
           "magazine_components.php": path.resolve("./src/templates/magazine.js"),
-          "about_components.php": path.resolve('./src/templates/about.js')
+          "about_components.php": path.resolve('./src/templates/about.js'),
+          "author_components.php": path.resolve('./src/templates/author.js')
         }
 
         // Create Page pages.
