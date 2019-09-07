@@ -53,6 +53,11 @@ const Title = styled.div`
   font-weight: bold;
   line-height: 0.8;
   color: rgb(255, 0, 153);
+
+  @media (min-width: 1600px) {
+    left: 15%;
+  }
+
 `
 
 const EventContainer = styled.div`
