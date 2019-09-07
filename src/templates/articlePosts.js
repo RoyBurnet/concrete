@@ -10,6 +10,7 @@ import { graphql, StaticQuery, Link } from "gatsby"
 
 export default ({ pageContext }) => {
   // const title = <div>dangerouslySetInnerHTML={{ __html: pageContext.title }}</div>
+  console.log(pageContext)
   return (
     <>
       <div>
@@ -22,16 +23,13 @@ export default ({ pageContext }) => {
               <div dangerouslySetInnerHTML={{ __html: pageContext.content }} />
             </Content>
           </div>
-
           {/* <ReadMoreWrapper>
             <ReadMoreLink to={"/article"}>
               {" "}
               <ReadMoreBtn>More</ReadMoreBtn>
             </ReadMoreLink>
           </ReadMoreWrapper> */}
-
           <ArticleSubContainer />
-
           <EventContainer>
             <Events />
           </EventContainer>
@@ -47,7 +45,7 @@ const TextHolder = styled.div`
 
 const Title = styled.div`
   position: absolute;
-  top: 60%;
+  top: 70%;
   left: 5%;
   font-size: 110px;
   font-weight: bold;

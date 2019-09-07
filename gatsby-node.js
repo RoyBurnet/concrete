@@ -64,7 +64,8 @@ exports.createPages = ({ graphql, actions }) => {
         const renderComponentFromTemplate = {
           "": path.resolve("./src/templates/page.js"),
           "index_components.php": path.resolve("./src/templates/index.js"),
-          "magazine_components.php": path.resolve("./src/templates/magazine.js")
+          "magazine_components.php": path.resolve("./src/templates/magazine.js"),
+          "about_components.php": path.resolve('./src/templates/about.js')
         }
 
         // Create Page pages.

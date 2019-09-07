@@ -11,8 +11,8 @@ import ShopContainer from '../components/ShopContainer'
 
 export default ({ pageContext }) => (
   <>
+      <Banner background={pageContext.featured_media.source_url} />
     <Layout>
-    <Banner background={pageContext.featured_media.source_url} />
       <ArticleContainer />
       <MusicPlayer />
       <EventSection />
