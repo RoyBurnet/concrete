@@ -34,7 +34,6 @@ const AudioContent = styled.div`
  background-color: #F9F9FA;
 `
 
-
 const SectionTitle = styled.div`
   font-family: couture;
   color: #ff0099;
