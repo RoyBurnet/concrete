@@ -15,11 +15,17 @@ export default ({ pageContext }) => {
       <div>
         <Layout2>
           <div>
-            <Title dangerouslySetInnerHTML={{ __html: pageContext.title }} />
-            <Banner background={pageContext.featured_media.source_url} />
-            <TextHolder></TextHolder>
+            <HeroBanner>
+              <Title dangerouslySetInnerHTML={{ __html: pageContext.title }} />
+              <Banner background={pageContext.featured_media.source_url} />
+            </HeroBanner>
             <Content>
               <div dangerouslySetInnerHTML={{ __html: pageContext.content }} />
+              <AuthorName>
+              <Link to={`/author/${pageContext.author.name}`}>
+                <p> Geschreven door: {pageContext.author.name}</p>
+              </Link>
+            </AuthorName>
             </Content>
           </div>
           {/* <ReadMoreWrapper>
@@ -38,22 +44,22 @@ export default ({ pageContext }) => {
   )
 }
 
-const TextHolder = styled.div`
+const HeroBanner = styled.div`
+  position: relative;
+`
+
+const AuthorName = styled.div`
+color: rgb(255, 0, 153);
 `
 
 const Title = styled.div`
   position: absolute;
-  top: 70%;
-  left: 5%;
+  top: 450px;
   font-size: 110px;
   font-weight: bold;
   line-height: 0.8;
   color: rgb(255, 0, 153);
-
-  @media (min-width: 1600px) {
-    left: 15%;
-  }
-
+  margin-left: 80px;
 `
 
 const EventContainer = styled.div`
@@ -79,30 +85,30 @@ const textContent = styled.div`
   padding: op 5px;
 `
 
-const ReadMoreBtn = styled.button`
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  border: none;
-  background-color: #d8d8d8;
-  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
-  margin-bottom: 150px;
-  transition: all 0.2s ease-in-out;
+// const ReadMoreBtn = styled.button`
+//   color: white;
+//   border-radius: 6px;
+//   text-decoration: none;
+//   border: none;
+//   background-color: #d8d8d8;
+//   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
+//   margin-bottom: 150px;
+//   transition: all 0.2s ease-in-out;
 
-  &:hover {
-    transform: scale(1.1);
-  }
-`
+//   &:hover {
+//     transform: scale(1.1);
+//   }
+// `
 
-const ReadMoreWrapper = styled.div`
-  margin-top: 30px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-`
+// const ReadMoreWrapper = styled.div`
+//   margin-top: 30px;
+//   display: flex;
+//   justify-content: center;
+//   text-align: center;
+// `
 
-const ReadMoreLink = styled(Link)`
-  display: block;
-  justify-content: center;
-  text-align: center;
-`
+// const ReadMoreLink = styled(Link)`
+//   display: block;
+//   justify-content: center;
+//   text-align: center;
+// `

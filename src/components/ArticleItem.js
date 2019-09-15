@@ -29,7 +29,18 @@ const ArticleItem = () => {
           {props.allWordpressWpArticle.edges.map(articleItem => (
             <LinkTag to={`/article/${articleItem.node.slug}`}>
               <ArticleItemCard key={articleItem.node.id}>
-              <ArticleThumbnailCover><div style={{marginLeft: "5px", fontSize: '20px', zIndex: '100' }}> {articleItem.node.title}</div></ArticleThumbnailCover>
+                <ArticleThumbnailCover>
+                  <div
+                    style={{
+                      marginLeft: "5px",
+                      fontSize: "20px",
+                      zIndex: "100",
+                    }}
+                  >
+                    {" "}
+                    {articleItem.node.title}
+                  </div>
+                </ArticleThumbnailCover>
                 <ArticleThumbnailImage
                   src={articleItem.node.featured_media.source_url}
                 />
@@ -47,7 +58,6 @@ const ArticleItem = () => {
 
                 </ArticleTextExcerpt> */}
               </ArticleItemCard>
-
             </LinkTag>
           ))}
         </>
@@ -57,26 +67,23 @@ const ArticleItem = () => {
 }
 
 const ArticleThumbnailCover = styled.div`
-background-color: #FF0099;
-opacity: 0.5;
-height: 191px;
-width: 276px;
-position:absolute; 
-z-index: 10;
-clip-path: polygon(0 0, 0 100%, 100% 0);
-
+  background-color: #ff0099;
+  opacity: 0.5;
+  height: 191px;
+  width: 276px;
+  position: absolute;
+  z-index: 10;
+  clip-path: polygon(0 0, 0 100%, 100% 0);
 `
 
 const ArticleItemCard = styled.div`
   height: 191px;
   margin-bottom: 50px;
-
 `
 
 const ArticleThumbnailImage = styled.img`
   width: 100%;
 `
-
 
 const ArticleReadMoreBtn = styled.div`
   color: black;

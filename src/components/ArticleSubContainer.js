@@ -46,7 +46,7 @@ const PlayerWrapper = styled.div`
 justify-content: space-around;
   align-items: center;
   margin-bottom: 50px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
   background-color: #F3F3F4;
 `
 

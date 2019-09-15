@@ -47,9 +47,9 @@ exports.createPages = ({ graphql, actions }) => {
                 featured_media {
                   source_url
                 }
-                author{
+                author {
                   name
-                  description
+                  link
                 }
               }
             }
@@ -112,6 +112,10 @@ exports.createPages = ({ graphql, actions }) => {
                     featured_media {
                       source_url
                     }
+                    author {
+                      name
+                      link
+                    }
                   }
                 }
               }
@@ -125,6 +129,7 @@ exports.createPages = ({ graphql, actions }) => {
           const articlePostsTemplate = path.resolve(
             "./src/templates/articlePosts.js"
           )
+  
           // We want to create a detailed page for each
           // post node. We'll just use the WordPress Slug for the slug.
           // The Post ID is prefixed with 'POST_'
@@ -139,6 +144,54 @@ exports.createPages = ({ graphql, actions }) => {
         // resolve()
       })
       // ==== END ARTICLE  POSTS ====
+
+      // === Authors pagese =====
+
+      .then(() => {
+        graphql(
+          `
+          {
+            allWordpressWpArticle {
+              edges {
+                node {
+                  featured_media{
+                    source_url
+                  }
+                  author {
+                    name
+                    link
+                    description
+                  }
+                }
+              }
+            }
+          }
+          
+          
+          `
+        ).then(result => {
+          if (result.errors) {
+            console.log(result.errors)
+            reject(result.errors)
+          }
+
+          const authorPostsTemplate = path.resolve(
+            "./src/templates/author.js"
+          )
+  
+          // We want to create a detailed page for each
+          // post node. We'll just use the WordPress Slug for the slug.
+          // The Post ID is prefixed with 'POST_'
+          _.each(result.data.allWordpressWpArticle.edges, edge => {
+            createPage({
+              path: `/author/${edge.node.author.name}/`,
+              component: slash(authorPostsTemplate),
+              context: edge.node,
+            })
+          })
+        })
+        // resolve()
+      })
 
       // ==== ARTICLE COLLECTION ====
       .then(() => {
