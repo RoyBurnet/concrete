@@ -239,8 +239,50 @@ exports.createPages = ({ graphql, actions }) => {
             })
           })
 
-          resolve()
+          // resolve()
         })
+      })
+            // ==== EVENTS COLLECTION ====
+      .then(() => {
+        graphql(
+          `
+          {
+            allWordpressWpEvent {
+              nodes {
+                title
+                slug
+                link
+                content
+                featured_media {
+                  source_url
+                }
+              }
+            }
+          }          
+          
+          `
+        ).then(result => {
+          if (result.errors) {
+            console.log(result.errors)
+            reject(result.errors)
+          }
+
+          const singleEventTemplate = path.resolve(
+            "./src/templates/singleEvent.js"
+          )
+  
+          // We want to create a detailed page for each
+          // post node. We'll just use the WordPress Slug for the slug.
+          // The Post ID is prefixed with 'POST_'
+          _.each(result.data.allWordpressWpEvent.nodes, node => {
+            createPage({
+              path: `/event/${node.slug}/`,
+              component: slash(singleEventTemplate),
+              context: node,
+            })
+          })
+        })
+        resolve()
       })
   })
 }

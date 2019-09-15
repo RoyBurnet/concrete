@@ -13,6 +13,7 @@ const EventSection = () => {
             nodes {
               title
               link
+              slug
               featured_media {
                 source_url
               }
@@ -22,26 +23,32 @@ const EventSection = () => {
       `}
       render={props => (
         <>
+        {console.log(props)}
           <SectionTitle>notable Events</SectionTitle>
           <EventsWrapper>
             <div>
+              <Link to={`/event/${props.allWordpressWpEvent.nodes[0].slug}`}>
               <Event1Cover>{props.allWordpressWpEvent.nodes[0].title}</Event1Cover>
               <Event1 src={props.allWordpressWpEvent.nodes[0].featured_media.source_url} />
+              </Link>
             </div>
             <div>
               <Event3Wrapper>
+              <Link to={`/event/${props.allWordpressWpEvent.nodes[1].slug}`}>
                 <Event3Cover>{props.allWordpressWpEvent.nodes[1].title}</Event3Cover>
                 <Event3 src={props.allWordpressWpEvent.nodes[1].featured_media.source_url} />
+                </Link>
               </Event3Wrapper>
 
               <div>
                 <Event2Wrapper>
+                <Link to={`/event/${props.allWordpressWpEvent.nodes[2].slug}`}>
                   <Event2Cover>{props.allWordpressWpEvent.nodes[2].title}</Event2Cover>
                   <Event2 src={props.allWordpressWpEvent.nodes[2].featured_media.source_url} />
+                  </Link>
                 </Event2Wrapper>
               </div>
             </div>
-
             {/* style={{marginLeft: '200px', marginTop: '70px'}} */}
             {/* 
       <div>
