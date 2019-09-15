@@ -1,40 +1,58 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 import eventImg from "../images/event.jpg"
 
+import { graphql, StaticQuery, Link } from "gatsby"
+
 const EventSection = () => {
   return (
-    <>
-        <SectionTitle>notable Events</SectionTitle>
-    <EventsWrapper>
-      <div>
-        <Event1Cover></Event1Cover>
-        <Event1 />
-      </div>
-      <div>
-        <Event3Wrapper>
-          <Event3Cover></Event3Cover>
-          <Event3 />
-        </Event3Wrapper>
+    <StaticQuery
+      query={graphql`
+        {
+          allWordpressWpEvent {
+            nodes {
+              title
+              link
+              featured_media {
+                source_url
+              }
+            }
+          }
+        }
+      `}
+      render={props => (
+        <>
+          <SectionTitle>notable Events</SectionTitle>
+          <EventsWrapper>
+            <div>
+              <Event1Cover>{props.allWordpressWpEvent.nodes[0].title}</Event1Cover>
+              <Event1 src={props.allWordpressWpEvent.nodes[0].featured_media.source_url} />
+            </div>
+            <div>
+              <Event3Wrapper>
+                <Event3Cover>{props.allWordpressWpEvent.nodes[1].title}</Event3Cover>
+                <Event3 src={props.allWordpressWpEvent.nodes[1].featured_media.source_url} />
+              </Event3Wrapper>
 
-        <div>
-        <Event2Wrapper>
-        <Event2Cover></Event2Cover>
-          <Event2 />
-          </Event2Wrapper>
-      </div>
-      </div>
+              <div>
+                <Event2Wrapper>
+                  <Event2Cover>{props.allWordpressWpEvent.nodes[2].title}</Event2Cover>
+                  <Event2 src={props.allWordpressWpEvent.nodes[2].featured_media.source_url} />
+                </Event2Wrapper>
+              </div>
+            </div>
 
-      {/* style={{marginLeft: '200px', marginTop: '70px'}} */}
-      {/* 
+            {/* style={{marginLeft: '200px', marginTop: '70px'}} */}
+            {/* 
       <div>
         <Link to="/events/">
           <OrderBtn>NOTABLE EVENTS</OrderBtn>
         </Link>
       </div> */}
-    </EventsWrapper>
-    </>
+          </EventsWrapper>
+        </>
+      )}
+    />
   )
 }
 
@@ -57,7 +75,7 @@ const Event2Wrapper = styled.div`
 `
 
 const Event2Cover = styled.div`
-  background-color: rgba(255, 255, 255, 0.72);
+  background-color: rgba(255, 255, 255, 0.90);
   opacity: 0.5;
   width: 300px;
   height: 300px;
@@ -66,7 +84,7 @@ const Event2Cover = styled.div`
   clip-path: polygon(0 0, 0 100%, 100% 0);
 `
 
-const Event2 = styled.div`
+const Event2 = styled.img`
   max-width: 300px;
   height: 300px;
   background-color: #d8d8d8;
@@ -91,7 +109,7 @@ const Event3Cover = styled.div`
   clip-path: polygon(0 0, 0 100%, 100% 0);
 `
 
-const Event3 = styled.div`
+const Event3 = styled.img`
   max-width: 300px;
   height: 300px;
   background-color: #d8d8d8;
@@ -117,11 +135,12 @@ const EventsWrapper = styled.div`
   text-align: center;
 `
 
-const Event1 = styled.div`
+const Event1 = styled.img`
   width: 465px;
   height: 339px;
   background-color: #d8d8d8;
   margin-bottom: 20px;
+
 `
 
 export default EventSection

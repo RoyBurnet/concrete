@@ -125,6 +125,7 @@ module.exports = {
           "**/*/*/about",
           "**/*/*/author",
           "**/*/*/contact",
+          "**/*/*/event",
           "**/*/*/curated-sounds",
           "**/*/*/for-the-culture-magazine",
           //  "**/*/*/portfolio",
