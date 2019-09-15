@@ -38,7 +38,7 @@ const ArticleItem = () => {
                     }}
                   >
                     {" "}
-                    {articleItem.node.title}
+                    <Title>{articleItem.node.title}</Title>
                   </div>
                 </ArticleThumbnailCover>
                 <ArticleThumbnailImage
@@ -105,6 +105,14 @@ const LinkTag = styled(Link)`
     text-decoration: none;
     color: white;
   }
+`
+
+const Title = styled.div`
+font-family: couture;
+    color: white;
+    margin: 0;
+    font-size: 20px;
+    margin-bottom: 50px;
 `
 
 

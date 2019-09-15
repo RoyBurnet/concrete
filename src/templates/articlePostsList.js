@@ -10,9 +10,6 @@ import Logo from "../images/logo.png"
 export default ({ pageContext }) => {
   return (
     <Layout>
-      <br />
-      <br />
-      <br />
       <ListContainer>
         {pageContext.articles.map(article => {
           return <ListItem data={article} />
@@ -34,11 +31,6 @@ export default ({ pageContext }) => {
           )
         )}
       </Pagination>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
     </Layout>
   )
 }

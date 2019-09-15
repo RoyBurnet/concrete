@@ -23,19 +23,18 @@ const EventSection = () => {
       `}
       render={props => (
         <>
-        {console.log(props)}
           <SectionTitle>notable Events</SectionTitle>
           <EventsWrapper>
             <div>
               <Link to={`/event/${props.allWordpressWpEvent.nodes[0].slug}`}>
-              <Event1Cover>{props.allWordpressWpEvent.nodes[0].title}</Event1Cover>
+              <Event1Cover><Title>{props.allWordpressWpEvent.nodes[0].title}</Title></Event1Cover>
               <Event1 src={props.allWordpressWpEvent.nodes[0].featured_media.source_url} />
               </Link>
             </div>
             <div>
               <Event3Wrapper>
               <Link to={`/event/${props.allWordpressWpEvent.nodes[1].slug}`}>
-                <Event3Cover>{props.allWordpressWpEvent.nodes[1].title}</Event3Cover>
+                <Event3Cover><Title>{props.allWordpressWpEvent.nodes[1].title}</Title></Event3Cover>
                 <Event3 src={props.allWordpressWpEvent.nodes[1].featured_media.source_url} />
                 </Link>
               </Event3Wrapper>
@@ -43,7 +42,7 @@ const EventSection = () => {
               <div>
                 <Event2Wrapper>
                 <Link to={`/event/${props.allWordpressWpEvent.nodes[2].slug}`}>
-                  <Event2Cover>{props.allWordpressWpEvent.nodes[2].title}</Event2Cover>
+                  <Event2Cover><Title>{props.allWordpressWpEvent.nodes[2].title}</Title></Event2Cover>
                   <Event2 src={props.allWordpressWpEvent.nodes[2].featured_media.source_url} />
                   </Link>
                 </Event2Wrapper>
@@ -62,6 +61,15 @@ const EventSection = () => {
     />
   )
 }
+
+
+const Title = styled.div`
+font-family: couture;
+    color: #ff0099;
+    margin: 0;
+    font-size: 30px;
+    margin-top: 5px;
+`
 
 const SectionTitle = styled.div`
   font-family: couture;

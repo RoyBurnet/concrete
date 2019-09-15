@@ -12,7 +12,7 @@ const ArticleItemsWrapperTitle = styled.div`
   width: 80px;
   margin-left: 30px;
   border-radius: 6px;
-  display: flex;
+  display: flex; 
   justify-content: center;
   color: white;
 `
@@ -28,16 +28,18 @@ const ArticleItemsWrapperMoreBtn = styled.button`
   margin-top: 20px;
 `
 
+const Container = styled.div`
+  margin-top: 200px;
+`
+
 const ListContainer = ({children}) => {
   return (
-    <>
-      <ArticleItemsWrapperTitle>Articles</ArticleItemsWrapperTitle>
+    <Container>
       <ArticleItemsWrapper>
-        {/* <ListItem /> */}
         {children}
-        {/* <ArticleItemsWrapperMoreBtn>Read More</ArticleItemsWrapperMoreBtn> */}
       </ArticleItemsWrapper>
-    </>
+
+    </Container>
   )
 }
 
