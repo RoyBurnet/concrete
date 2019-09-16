@@ -8,10 +8,9 @@ import Footer from "../components/Footer"
 
 export default ({ pageContext }) => {
   return (
-    <>
-      <div>
+
         <Layout2>
-          <div>
+ 
             <HeroBanner>
               <Title dangerouslySetInnerHTML={{ __html: pageContext.title }} />
               <Banner background={pageContext.featured_media.source_url} />
@@ -19,14 +18,12 @@ export default ({ pageContext }) => {
             <Content>
               <div dangerouslySetInnerHTML={{ __html: pageContext.content }} />
             </Content>
-          </div>
-          <EventContainer>
+         
+
             <Events />
-          </EventContainer>
+
           <Footer />
         </Layout2>
-      </div>
-    </>
   )
 }
 
@@ -46,10 +43,6 @@ const Title = styled.div`
   line-height: 0.8;
   color: rgb(255, 0, 153);
   margin-left: 80px;
-`
-
-const EventContainer = styled.div`
-  margin-left: 200px;
 `
 
 const Content = styled.div`
