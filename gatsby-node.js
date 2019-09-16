@@ -67,10 +67,9 @@ exports.createPages = ({ graphql, actions }) => {
         
         const renderComponentFromTemplate = {
           "": path.resolve("./src/templates/page.js"),
-          "index_components.php": path.resolve("./src/templates/index.js"),
-          "magazine_components.php": path.resolve("./src/templates/magazine.js"),
-          "about_components.php": path.resolve('./src/templates/about.js'),
-          "author_components.php": path.resolve('./src/templates/author.js')
+          "index_components.php": path.resolve("./src/pages/indexPage.js"),
+          "about_components.php": path.resolve('./src/pages/aboutPage.js'),
+          "author_components.php": path.resolve('./src/pages/authorPage.js')
         }
 
         // Create Page pages.
@@ -176,7 +175,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
 
           const authorPostsTemplate = path.resolve(
-            "./src/templates/author.js"
+            "./src/pages/authorPage.js"
           )
   
           // We want to create a detailed page for each
@@ -268,7 +267,7 @@ exports.createPages = ({ graphql, actions }) => {
           }
 
           const singleEventTemplate = path.resolve(
-            "./src/templates/singleEvent.js"
+            "./src/pages/eventPage.js"
           )
   
           // We want to create a detailed page for each

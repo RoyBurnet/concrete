@@ -7,9 +7,11 @@ import ArticleItem from "./ArticleItem"
 
 const ArticleContainer = () => {
   return (
+    <Container>
       <ArticleItemsWrapper>
         <ArticleItem />
       </ArticleItemsWrapper>
+    </Container>
   )
 
 }
@@ -19,6 +21,12 @@ const ArticleContainer = () => {
 export default ArticleContainer
 
 
+const Container = styled.div`
+padding-left: 200px;
+padding-right: 200px;
+
+
+`
 const ArticleItemsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;

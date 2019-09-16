@@ -29,7 +29,7 @@ const ArticleItem = () => {
           {props.allWordpressWpArticle.edges.map(articleItem => (
             <LinkTag to={`/article/${articleItem.node.slug}`}>
               <ArticleItemCard key={articleItem.node.id}>
-              <ArticleThumbnailCover><div style={{ fontSize: '20px', zIndex: '100' }}> {articleItem.node.title}</div></ArticleThumbnailCover>
+              <ArticleThumbnailCover><Title> {articleItem.node.title}</Title></ArticleThumbnailCover>
                 <ArticleThumbnailImage
                   src={articleItem.node.featured_media.source_url}
                 />
@@ -55,6 +55,14 @@ const ArticleItem = () => {
     />
   )
 }
+
+
+const Title = styled.div`
+font-family: couture;
+    color: white;
+    margin: 0;
+    font-size: 20px;
+`
 
 const ArticleThumbnailCover = styled.div`
 background-color: #FF0099;

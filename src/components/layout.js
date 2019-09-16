@@ -2,8 +2,9 @@ import React from "react"
 
 import MainMenu from "./MainMenu"
 
-import styled, { createGlobalStyle } from "styled-components"
+import Footer from '../components/Footer'
 
+import styled, { createGlobalStyle } from "styled-components"
 
 const Layout = ({ children }) => (
   <>
@@ -11,7 +12,7 @@ const Layout = ({ children }) => (
     <LayoutWrapper>
     <MainMenu />
     {children}
-    {/* <Footer/> */}
+    <Footer/>
     </LayoutWrapper>
   </>
 )
@@ -41,14 +42,14 @@ overflow: hidden;
   min-height: 100%;
 `
 
-const Footer = styled.footer`
-  width: 100%;
-  height: 50px;
-  background-color: white;
-  bottom: 100%;
-  display: flex;
-  margin-top: auto;
-  background-color: #FF0099;
-`
+// const Footer = styled.footer`
+//   width: 100%;
+//   height: 50px;
+//   background-color: white;
+//   bottom: 100%;
+//   display: flex;
+//   margin-top: auto;
+//   background-color: #FF0099;
+// `
 
 export default Layout

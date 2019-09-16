@@ -38,7 +38,6 @@ const EventSection = () => {
                 <Event3 src={props.allWordpressWpEvent.nodes[1].featured_media.source_url} />
                 </Link>
               </Event3Wrapper>
-
               <div>
                 <Event2Wrapper>
                 <Link to={`/event/${props.allWordpressWpEvent.nodes[2].slug}`}>
@@ -68,7 +67,7 @@ font-family: couture;
     color: #ff0099;
     margin: 0;
     font-size: 30px;
-    margin-top: 5px;
+
 `
 
 const SectionTitle = styled.div`
@@ -147,7 +146,9 @@ const EventsWrapper = styled.div`
   display: flex;
   flex-direction: row;
   position: relative;
-  text-align: center;
+  /* align-items: center; */
+  justify-content: center;
+
 `
 
 const Event1 = styled.img`

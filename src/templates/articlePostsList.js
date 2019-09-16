@@ -35,7 +35,6 @@ export default ({ pageContext }) => {
   )
 }
 
-
 const Pagination = styled.div`
   margin-top: 50px;
   display: flex;

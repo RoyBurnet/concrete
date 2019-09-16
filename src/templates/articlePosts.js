@@ -9,7 +9,6 @@ import Events from "../components/Events"
 import { graphql, StaticQuery, Link } from "gatsby"
 
 export default ({ pageContext }) => {
-  console.log(pageContext)
   return (
     <>
       <div>
@@ -28,12 +27,6 @@ export default ({ pageContext }) => {
             </AuthorName>
             </Content>
           </div>
-          {/* <ReadMoreWrapper>
-            <ReadMoreLink to={"/article"}>
-              {" "}
-              <ReadMoreBtn>More</ReadMoreBtn>
-            </ReadMoreLink>
-          </ReadMoreWrapper> */}
           <ArticleSubContainer />
           <EventContainer>
             <Events />
@@ -84,31 +77,3 @@ const TitleText = styled.h1`
 const textContent = styled.div`
   padding: op 5px;
 `
-
-// const ReadMoreBtn = styled.button`
-//   color: white;
-//   border-radius: 6px;
-//   text-decoration: none;
-//   border: none;
-//   background-color: #d8d8d8;
-//   box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08);
-//   margin-bottom: 150px;
-//   transition: all 0.2s ease-in-out;
-
-//   &:hover {
-//     transform: scale(1.1);
-//   }
-// `
-
-// const ReadMoreWrapper = styled.div`
-//   margin-top: 30px;
-//   display: flex;
-//   justify-content: center;
-//   text-align: center;
-// `
-
-// const ReadMoreLink = styled(Link)`
-//   display: block;
-//   justify-content: center;
-//   text-align: center;
-// `

@@ -1,13 +1,13 @@
 import React from "react"
-import Layout from "../components/layout"
+import Layout2 from "../components/layout2"
 import AboutBanner from "../components/AboutBanner"
 import styled from "styled-components"
 import EventSection from "../components/Events"
 import Footer from "../components/Footer"
 
 export default ({ pageContext }) => (
-  <>
-    {console.log(pageContext)}
+  
+  <Layout2>
     <AboutBanner background={pageContext.featured_media.source_url} />
     <AboutContent>
       <Title dangerouslySetInnerHTML={{ __html: pageContext.title }} />
@@ -15,12 +15,10 @@ export default ({ pageContext }) => (
         dangerouslySetInnerHTML={{ __html: pageContext.content }}
       ></TextContent>
     </AboutContent>
-    <Layout>
       <div style={{ marginTop: "450px" }}></div>
       <EventSection />
-    </Layout>
-    <Footer />
-  </>
+      <Footer/>
+  </Layout2>
 )
 
 const AboutContent = styled.div`

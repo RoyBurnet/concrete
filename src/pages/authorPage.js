@@ -4,9 +4,9 @@ import styled from "styled-components"
 import Layout2 from "../components/layout2"
 import ArticleSubContainer from "../components/ArticleSubContainer"
 import Events from "../components/Events"
+import Footer from "../components/Footer"
 
 export default ({ pageContext }) => {
-  console.log(pageContext)
   return (
     <Layout2>
       <ContentHolder>
@@ -28,6 +28,7 @@ export default ({ pageContext }) => {
       <EventContainer>
         <Events />
       </EventContainer>
+      <Footer />
     </Layout2>
   )
 }

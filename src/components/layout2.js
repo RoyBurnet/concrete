@@ -1,13 +1,8 @@
 import React from "react"
 
 import MainMenu from "./MainMenu"
-import Footer from "../components/Footer"
-// import ArticleSubContainer from './ArticleSubContainer'
-// import Events from "./Events"
 
 import styled, { createGlobalStyle } from "styled-components"
-
-
 
 const Layout2 = ({ children }) => (
   <>
@@ -15,7 +10,7 @@ const Layout2 = ({ children }) => (
     <LayoutWrapper>
     <MainMenu />
     {children}
-    <Footer/>
+
     </LayoutWrapper>
   </>
 )
