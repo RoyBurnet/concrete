@@ -77,6 +77,7 @@ const SectionTitle = styled.div`
   font-size: 40px;
   margin-top: 50px;
   margin-bottom: 50px;
+  padding-left: 20px;
 `
 
 const Event2Wrapper = styled.div`

@@ -32,10 +32,11 @@ const GlobalStyles = createGlobalStyle`
 `
 
 const LayoutWrapper = styled.div`
-overflow: hidden;
+  overflow: hidden;
   max-width: 1467px;
   margin: auto;
   min-height: 100%;
+
 `
 
 export default Layout2

@@ -37,6 +37,7 @@ const SectionTitle = styled.div`
   margin: 0;
   font-size: 40px;
   margin-top: 50px;
+  padding-left: 20px;
 `
 
 const PlayerWrapper = styled.div`
