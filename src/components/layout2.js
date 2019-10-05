@@ -8,9 +8,8 @@ const Layout2 = ({ children }) => (
   <>
     <GlobalStyles />
     <LayoutWrapper>
-    <MainMenu />
-    {children}
-
+      <MainMenu />
+      {children}
     </LayoutWrapper>
   </>
 )
@@ -36,7 +35,6 @@ const LayoutWrapper = styled.div`
   max-width: 1467px;
   margin: auto;
   min-height: 100%;
-
 `
 
 export default Layout2

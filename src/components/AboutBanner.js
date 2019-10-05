@@ -3,14 +3,14 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import backgroundBanner from "../images/banner4.jpg"
 
-
 const AboutBanner = props => {
   return (
     <div>
-    <BannerWrapper style={{ backgroundImage: `url(${props.background})` }} >
-    </BannerWrapper>
-        {/* <AboutContent></AboutContent> */}
-        </div>
+      <BannerWrapper
+        style={{ backgroundImage: `url(${props.background})` }}
+      ></BannerWrapper>
+      {/* <AboutContent></AboutContent> */}
+    </div>
   )
 }
 

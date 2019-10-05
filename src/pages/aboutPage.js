@@ -6,7 +6,6 @@ import EventSection from "../components/Events"
 import Footer from "../components/Footer"
 
 export default ({ pageContext }) => (
-  
   <Layout2>
     <AboutBanner background={pageContext.featured_media.source_url} />
     <AboutContent>
@@ -15,9 +14,9 @@ export default ({ pageContext }) => (
         dangerouslySetInnerHTML={{ __html: pageContext.content }}
       ></TextContent>
     </AboutContent>
-      <div style={{ marginTop: "450px" }}></div>
-      <EventSection />
-      <Footer/>
+    <div style={{ marginTop: "450px" }}></div>
+    <EventSection />
+    <Footer />
   </Layout2>
 )
 

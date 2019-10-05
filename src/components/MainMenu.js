@@ -31,7 +31,7 @@ const MainMenu = () => (
       `}
       render={props => (
         <div>
-          <MenuWrapper bg="white" expand="lg"  fixed="top">
+          <MenuWrapper bg="white" expand="lg" fixed="top">
             <Navbar.Brand href="/">
               {" "}
               <MenuLogo src={logo} alt="" />
@@ -41,7 +41,11 @@ const MainMenu = () => (
               <MenuItemWrapper className="mr-auto">
                 {props.allWordpressWpApiMenusMenusItems.edges[0].node.items.map(
                   item => (
-                    <MenuItem to={item.object_slug} key={item.title}  activeStyle={{color: '#FF0099' }}>
+                    <MenuItem
+                      to={item.object_slug}
+                      key={item.title}
+                      activeStyle={{ color: "#FF0099" }}
+                    >
                       {item.title}
                     </MenuItem>
                   )
@@ -56,9 +60,9 @@ const MainMenu = () => (
 )
 
 const MenuWrapper = styled(Navbar)`
-    /* box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08); */
-    height: 155px;
-    flex-direction: column;
+  /* box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08); */
+  height: 155px;
+  flex-direction: column;
 `
 
 const MenuLogo = styled.img`
@@ -81,13 +85,11 @@ const MenuItem = styled(Link)`
   padding: 8px 40px;
   text-decoration: none;
   font-family: couture;
-  
 
   &:hover {
     color: gray;
     text-decoration: none;
   }
-  
 `
 
 export default MainMenu

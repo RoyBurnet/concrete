@@ -30,12 +30,12 @@ const LinkTag = styled(Link)`
   }
 `
 const Title = styled.div`
-font-family: couture;
-    color: #ff0099;
-    margin: 0;
-    font-size: 40px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+  font-family: couture;
+  color: #ff0099;
+  margin: 0;
+  font-size: 40px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 `
 
 const ListItem = props => {

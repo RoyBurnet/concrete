@@ -21,7 +21,13 @@ class Footer extends Component {
             view="coverart"d
           /> */}
 
-          <AudioContent><h2 style={{margin: "20px", color: "#ff0099", fontWeight: "bold"}}>MELD JE NU AAN VOOR DE NIEUWSBRIEF</h2></AudioContent> 
+          <AudioContent>
+            <h2
+              style={{ margin: "20px", color: "#ff0099", fontWeight: "bold" }}
+            >
+              MELD JE NU AAN VOOR DE NIEUWSBRIEF
+            </h2>
+          </AudioContent>
         </PlayerWrapper>
       </>
     )
@@ -29,9 +35,9 @@ class Footer extends Component {
 }
 
 const AudioContent = styled.div`
- height: 400px;
- width: 700px;
- background-color: #F9F9FA;
+  height: 400px;
+  width: 700px;
+  background-color: #f9f9fa;
 `
 
 const SectionTitle = styled.div`
@@ -45,11 +51,11 @@ const SectionTitle = styled.div`
 const PlayerWrapper = styled.div`
   display: flex;
   height: 600px;
-justify-content: space-around;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 50px;
   margin-top: 50px;
-  background-color: #F3F3F4;
+  background-color: #f3f3f4;
 `
 
 const Btn = styled.button`
@@ -68,4 +74,4 @@ const Btn = styled.button`
   }
 `
 
-export default Footer;
+export default Footer

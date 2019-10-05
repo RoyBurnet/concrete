@@ -24,9 +24,15 @@ class MusicPlayer extends Component {
             view="coverart"d
           /> */}
 
-          <AudioContent><AudioImage src={imgA}/></AudioContent> 
-          <AudioContent><AudioImage src={imgB}/></AudioContent> 
-          <AudioContent><AudioImage src={imgC}/></AudioContent>
+          <AudioContent>
+            <AudioImage src={imgA} />
+          </AudioContent>
+          <AudioContent>
+            <AudioImage src={imgB} />
+          </AudioContent>
+          <AudioContent>
+            <AudioImage src={imgC} />
+          </AudioContent>
         </PlayerWrapper>
       </>
     )
@@ -34,13 +40,13 @@ class MusicPlayer extends Component {
 }
 
 const AudioContent = styled.div`
- height: 250px;
- width: 250px;
- background-color: orange;
+  height: 250px;
+  width: 250px;
+  background-color: orange;
 `
 
 const AudioImage = styled.img`
-width: 100%;
+  width: 100%;
 `
 
 const SectionTitle = styled.div`
@@ -55,11 +61,11 @@ const SectionTitle = styled.div`
 const PlayerWrapper = styled.div`
   display: flex;
   height: 400px;
-justify-content: space-around;
+  justify-content: space-around;
   align-items: center;
   margin-bottom: 50px;
   margin-top: 50px;
-  background-color: #F3F3F4;
+  background-color: #f3f3f4;
 `
 
 const Btn = styled.button`

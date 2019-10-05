@@ -62,21 +62,23 @@ const LinkTag = styled(Link)`
 const GridContainerItem = props => {
   return (
     <LinkTag to={`/article/${props.data.node.slug}`}>
-    <GridContainerItemCard>
-      <GridContainerThumbnailImage
-        src={props.data.node.featured_media.source_url}
-      />
-      <GridContainerTextExcerpt>
-        <h6><strong>{props.data.node.title}</strong></h6>
-        <ExcerptContent
-          dangerouslySetInnerHTML={{
-            __html: !(props.data.node.excerpt > 75)
-              ? props.data.node.excerpt.substring(0, 75) + "..."
-              : props.data.node.excerpt,
-          }}
+      <GridContainerItemCard>
+        <GridContainerThumbnailImage
+          src={props.data.node.featured_media.source_url}
         />
-      </GridContainerTextExcerpt>
-    </GridContainerItemCard>
+        <GridContainerTextExcerpt>
+          <h6>
+            <strong>{props.data.node.title}</strong>
+          </h6>
+          <ExcerptContent
+            dangerouslySetInnerHTML={{
+              __html: !(props.data.node.excerpt > 75)
+                ? props.data.node.excerpt.substring(0, 75) + "..."
+                : props.data.node.excerpt,
+            }}
+          />
+        </GridContainerTextExcerpt>
+      </GridContainerItemCard>
     </LinkTag>
   )
 }

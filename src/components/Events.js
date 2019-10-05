@@ -27,22 +27,44 @@ const EventSection = () => {
           <EventsWrapper>
             <div>
               <Link to={`/event/${props.allWordpressWpEvent.nodes[0].slug}`}>
-              <Event1Cover><Title>{props.allWordpressWpEvent.nodes[0].title}</Title></Event1Cover>
-              <Event1 src={props.allWordpressWpEvent.nodes[0].featured_media.source_url} />
+                <Event1Cover>
+                  <Title>{props.allWordpressWpEvent.nodes[0].title}</Title>
+                </Event1Cover>
+                <Event1
+                  src={
+                    props.allWordpressWpEvent.nodes[0].featured_media.source_url
+                  }
+                />
               </Link>
             </div>
             <div>
               <Event3Wrapper>
-              <Link to={`/event/${props.allWordpressWpEvent.nodes[1].slug}`}>
-                <Event3Cover><Title>{props.allWordpressWpEvent.nodes[1].title}</Title></Event3Cover>
-                <Event3 src={props.allWordpressWpEvent.nodes[1].featured_media.source_url} />
+                <Link to={`/event/${props.allWordpressWpEvent.nodes[1].slug}`}>
+                  <Event3Cover>
+                    <Title>{props.allWordpressWpEvent.nodes[1].title}</Title>
+                  </Event3Cover>
+                  <Event3
+                    src={
+                      props.allWordpressWpEvent.nodes[1].featured_media
+                        .source_url
+                    }
+                  />
                 </Link>
               </Event3Wrapper>
               <div>
                 <Event2Wrapper>
-                <Link to={`/event/${props.allWordpressWpEvent.nodes[2].slug}`}>
-                  <Event2Cover><Title>{props.allWordpressWpEvent.nodes[2].title}</Title></Event2Cover>
-                  <Event2 src={props.allWordpressWpEvent.nodes[2].featured_media.source_url} />
+                  <Link
+                    to={`/event/${props.allWordpressWpEvent.nodes[2].slug}`}
+                  >
+                    <Event2Cover>
+                      <Title>{props.allWordpressWpEvent.nodes[2].title}</Title>
+                    </Event2Cover>
+                    <Event2
+                      src={
+                        props.allWordpressWpEvent.nodes[2].featured_media
+                          .source_url
+                      }
+                    />
                   </Link>
                 </Event2Wrapper>
               </div>
@@ -61,13 +83,11 @@ const EventSection = () => {
   )
 }
 
-
 const Title = styled.div`
-font-family: couture;
-    color: #ff0099;
-    margin: 0;
-    font-size: 30px;
-
+  font-family: couture;
+  color: #ff0099;
+  margin: 0;
+  font-size: 30px;
 `
 
 const SectionTitle = styled.div`
@@ -90,7 +110,7 @@ const Event2Wrapper = styled.div`
 `
 
 const Event2Cover = styled.div`
-  background-color: rgba(255, 255, 255, 0.90);
+  background-color: rgba(255, 255, 255, 0.9);
   opacity: 0.5;
   width: 300px;
   height: 300px;
@@ -149,7 +169,6 @@ const EventsWrapper = styled.div`
   position: relative;
   /* align-items: center; */
   justify-content: center;
-
 `
 
 const Event1 = styled.img`
@@ -157,7 +176,6 @@ const Event1 = styled.img`
   height: 339px;
   background-color: #d8d8d8;
   margin-bottom: 20px;
-
 `
 
 export default EventSection

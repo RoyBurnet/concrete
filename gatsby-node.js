@@ -64,12 +64,12 @@ exports.createPages = ({ graphql, actions }) => {
         }
 
         // Create Page pages templates
-        
+
         const renderComponentFromTemplate = {
           "": path.resolve("./src/templates/page.js"),
           "index_components.php": path.resolve("./src/pages/indexPage.js"),
-          "about_components.php": path.resolve('./src/pages/aboutPage.js'),
-          "author_components.php": path.resolve('./src/pages/authorPage.js')
+          "about_components.php": path.resolve("./src/pages/aboutPage.js"),
+          "author_components.php": path.resolve("./src/pages/authorPage.js"),
         }
 
         // Create Page pages.
@@ -79,7 +79,7 @@ exports.createPages = ({ graphql, actions }) => {
         // The Page ID is prefixed with 'PAGE_'
         _.each(result.data.allWordpressPage.edges, edge => {
           // Gatsby uses Redux to manage its internal state.
-          // Plugins and sites can use functions like "createPage" 
+          // Plugins and sites can use functions like "createPage"
           // to interact with Gatsby.
 
           createPage({
@@ -128,7 +128,7 @@ exports.createPages = ({ graphql, actions }) => {
           const articlePostsTemplate = path.resolve(
             "./src/templates/articlePosts.js"
           )
-  
+
           // We want to create a detailed page for each
           // post node. We'll just use the WordPress Slug for the slug.
           // The Post ID is prefixed with 'POST_'
@@ -149,24 +149,22 @@ exports.createPages = ({ graphql, actions }) => {
       .then(() => {
         graphql(
           `
-          {
-            allWordpressWpArticle {
-              edges {
-                node {
-                  featured_media{
-                    source_url
-                  }
-                  author {
-                    name
-                    link
-                    description
+            {
+              allWordpressWpArticle {
+                edges {
+                  node {
+                    featured_media {
+                      source_url
+                    }
+                    author {
+                      name
+                      link
+                      description
+                    }
                   }
                 }
               }
             }
-          }
-          
-          
           `
         ).then(result => {
           if (result.errors) {
@@ -174,10 +172,8 @@ exports.createPages = ({ graphql, actions }) => {
             reject(result.errors)
           }
 
-          const authorPostsTemplate = path.resolve(
-            "./src/pages/authorPage.js"
-          )
-  
+          const authorPostsTemplate = path.resolve("./src/pages/authorPage.js")
+
           // We want to create a detailed page for each
           // post node. We'll just use the WordPress Slug for the slug.
           // The Post ID is prefixed with 'POST_'
@@ -241,24 +237,23 @@ exports.createPages = ({ graphql, actions }) => {
           // resolve()
         })
       })
-            // ==== EVENTS COLLECTION ====
+      // ==== EVENTS COLLECTION ====
       .then(() => {
         graphql(
           `
-          {
-            allWordpressWpEvent {
-              nodes {
-                title
-                slug
-                link
-                content
-                featured_media {
-                  source_url
+            {
+              allWordpressWpEvent {
+                nodes {
+                  title
+                  slug
+                  link
+                  content
+                  featured_media {
+                    source_url
+                  }
                 }
               }
             }
-          }          
-          
           `
         ).then(result => {
           if (result.errors) {
@@ -266,10 +261,8 @@ exports.createPages = ({ graphql, actions }) => {
             reject(result.errors)
           }
 
-          const singleEventTemplate = path.resolve(
-            "./src/pages/eventPage.js"
-          )
-  
+          const singleEventTemplate = path.resolve("./src/pages/eventPage.js")
+
           // We want to create a detailed page for each
           // post node. We'll just use the WordPress Slug for the slug.
           // The Post ID is prefixed with 'POST_'

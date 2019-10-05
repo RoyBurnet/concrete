@@ -108,13 +108,11 @@ const LinkTag = styled(Link)`
 `
 
 const Title = styled.div`
-font-family: couture;
-    color: white;
-    margin: 0;
-    font-size: 20px;
-    margin-bottom: 50px;
+  font-family: couture;
+  color: white;
+  margin: 0;
+  font-size: 20px;
+  margin-bottom: 50px;
 `
-
-
 
 export default ArticleItem

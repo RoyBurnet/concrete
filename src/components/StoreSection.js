@@ -53,16 +53,15 @@ const StoreSection = () => {
   return (
     <StoreWrapper>
       <h2>FOR THE CULURE MAGAZINE OUT NOW !</h2>
-        <StoreImage src={bookImg} />
-        <StoreText>
-          <p>
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse.
-          </p>
-        </StoreText>
+      <StoreImage src={bookImg} />
+      <StoreText>
+        <p>
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse.
+        </p>
+      </StoreText>
       <div>
         <Link to="/for-the-culture-magazine/">
           <OrderBtn>ORDER HERE</OrderBtn>

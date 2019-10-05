@@ -4,7 +4,6 @@ import { Link } from "gatsby"
 
 import ArticleItem from "./ArticleItem"
 
-
 const ArticleContainer = () => {
   return (
     <Container>
@@ -13,19 +12,15 @@ const ArticleContainer = () => {
       </ArticleItemsWrapper>
     </Container>
   )
-
 }
 
 // <div><ReadMoreLink to={"/article"}> <ArticleBtn>ALL ARTICLES</ArticleBtn></ReadMoreLink></div>
 
 export default ArticleContainer
 
-
 const Container = styled.div`
-padding-left: 200px;
-padding-right: 200px;
-
-
+  padding-left: 200px;
+  padding-right: 200px;
 `
 const ArticleItemsWrapper = styled.div`
   display: flex;
@@ -33,5 +28,4 @@ const ArticleItemsWrapper = styled.div`
   color: #d8d8d8;
   max-width: 100%;
   justify-content: space-between;
-
 `

@@ -9,13 +9,11 @@ import InputGroup from "react-bootstrap/InputGroup"
 
 import styled from "styled-components"
 
-const FormWrapper = styled(Form)`
-
-`
+const FormWrapper = styled(Form)``
 
 const EmailForm = () => {
   return (
-    <div style={{"padding": "0px 20px"}} >
+    <div style={{ padding: "0px 20px" }}>
       <FormWrapper>
         <Form.Group controlId="formBasicEmail">
           <Form.Label>Email address</Form.Label>
