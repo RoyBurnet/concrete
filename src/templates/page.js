@@ -5,10 +5,8 @@ import styled from "styled-components"
 import backgroundBanner from "../images/banner4.jpg"
 import {Link} from "gatsby"
 
-
 export default ({ pageContext }) => (
   <>
-    {console.log(pageContext)}
     <Banner background={backgroundBanner} />
     <Layout>
       <h1

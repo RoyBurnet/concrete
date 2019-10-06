@@ -60,8 +60,8 @@ const MainMenu = () => (
 )
 
 const MenuWrapper = styled(Navbar)`
-  /* box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12), 0 0 1px 0 rgba(0, 0, 0, 0.08); */
   height: 155px;
+  opacity: 0.99;
   flex-direction: column;
 `
 
