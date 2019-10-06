@@ -1,15 +1,10 @@
 import React from "react"
 import { graphql, StaticQuery, Link } from "gatsby"
 import styled from "styled-components"
-
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
-
 import logo from "../images/cblogo.svg"
-
 import "bootstrap/dist/css/bootstrap.css"
-
-// import SiteInfo from "./SiteInfo"
 
 const MainMenu = () => (
   <>
