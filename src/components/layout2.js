@@ -10,7 +10,11 @@ const Layout2 = ({ children }) => (
     <LayoutWrapper>
       <MainMenu />
       {children}
-      <Footer/>
+      <Footer>
+        <FooterContent>
+          <p>Concrete Blossom</p>
+        </FooterContent>
+      </Footer>
     </LayoutWrapper>
   </>
 )
@@ -39,9 +43,19 @@ const LayoutWrapper = styled.div`
 `
 
 const Footer = styled.footer`
-  height: 100px;
+  height: 80px;
   width: 100%;
+  color: white;
   background-color: #ff0099;
+  text-align: center;
+  position: relative;
+`
+
+const FooterContent = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `
 
 export default Layout2
