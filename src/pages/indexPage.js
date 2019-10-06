@@ -15,6 +15,6 @@ export default ({ pageContext }) => (
     <ArticleContainer />
     <MusicPlayer />
     <EventSection />
-    <ShopContainer />
+    {/* <ShopContainer /> */}
   </Layout2>
 )

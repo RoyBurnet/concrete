@@ -10,6 +10,7 @@ const Layout2 = ({ children }) => (
     <LayoutWrapper>
       <MainMenu />
       {children}
+      <Footer/>
     </LayoutWrapper>
   </>
 )
@@ -35,6 +36,12 @@ const LayoutWrapper = styled.div`
   max-width: 1467px;
   margin: auto;
   min-height: 100%;
+`
+
+const Footer = styled.footer`
+  height: 100px;
+  width: 100%;
+  background-color: #ff0099;
 `
 
 export default Layout2

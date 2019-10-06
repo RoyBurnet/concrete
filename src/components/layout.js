@@ -2,7 +2,7 @@ import React from "react"
 
 import MainMenu from "./MainMenu"
 
-import Footer from '../components/Footer'
+import Footer from './EmailCTA'
 
 import styled, { createGlobalStyle } from "styled-components"
 

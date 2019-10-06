@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Banner from "../components/Banner"
 import Events from "../components/Events"
 
-import Footer from "../components/Footer"
+import EmailCTA from "../components/EmailCTA"
 
 export default ({ pageContext }) => {
   return (
@@ -16,10 +16,8 @@ export default ({ pageContext }) => {
       <Content>
         <div dangerouslySetInnerHTML={{ __html: pageContext.content }} />
       </Content>
-
       <Events />
-
-      <Footer />
+      <EmailCTA />
     </Layout2>
   )
 }

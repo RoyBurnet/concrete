@@ -3,7 +3,7 @@ import Layout2 from "../components/layout2"
 import AboutBanner from "../components/AboutBanner"
 import styled from "styled-components"
 import EventSection from "../components/Events"
-import Footer from "../components/Footer"
+import EmailCTA from "../components/EmailCTA"
 
 export default ({ pageContext }) => (
   <Layout2>
@@ -16,7 +16,7 @@ export default ({ pageContext }) => (
     </AboutContent>
     <div style={{ marginTop: "450px" }}></div>
     <EventSection />
-    <Footer />
+    <EmailCTA />
   </Layout2>
 )
 

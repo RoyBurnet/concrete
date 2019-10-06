@@ -18,13 +18,26 @@ class MusicPlayer extends Component {
             <Btn>CURATED SOUNDS</Btn>
           </Link>
            */}
-          {/* <SpotifyPlayer
+          <SpotifyPlayer
             uri="https://open.spotify.com/artist/3sqcegx4uDKLAD4tIEPg6v"
             theme="black"
-            view="coverart"d
-          /> */}
+            view="coverart"
+            d
+          />
 
-          <AudioContent>
+          <SpotifyPlayer
+            uri="https://open.spotify.com/artist/3sqcegx4uDKLAD4tIEPg6v"
+            theme="black"
+            view="coverart"
+            d
+          />
+          <SpotifyPlayer
+            uri="https://open.spotify.com/artist/3sqcegx4uDKLAD4tIEPg6v"
+            theme="black"
+            view="coverart"
+            d
+          />
+          {/* <AudioContent>
             <AudioImage src={imgA} />
           </AudioContent>
           <AudioContent>
@@ -32,7 +45,7 @@ class MusicPlayer extends Component {
           </AudioContent>
           <AudioContent>
             <AudioImage src={imgC} />
-          </AudioContent>
+          </AudioContent> */}
         </PlayerWrapper>
       </>
     )

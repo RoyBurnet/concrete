@@ -4,7 +4,7 @@ import styled from "styled-components"
 import Layout2 from "../components/layout2"
 import ArticleSubContainer from "../components/ArticleSubContainer"
 import Events from "../components/Events"
-import Footer from "../components/Footer"
+import EmailCTA from "../components/EmailCTA"
 
 export default ({ pageContext }) => {
   return (
@@ -28,7 +28,7 @@ export default ({ pageContext }) => {
       <EventContainer>
         <Events />
       </EventContainer>
-      <Footer />
+      <EmailCTA />
     </Layout2>
   )
 }
