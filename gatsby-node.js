@@ -67,9 +67,9 @@ exports.createPages = ({ graphql, actions }) => {
 
         const renderComponentFromTemplate = {
           "": path.resolve("./src/templates/page.js"),
-          "index_components.php": path.resolve("./src/pages/index.js"),
-          "about_components.php": path.resolve("./src/pages/about.js"),
-          "author_components.php": path.resolve("./src/pages/author.js"),
+          "index_components.php": path.resolve("./src/templates/index.js"),
+          "about_components.php": path.resolve("./src/templates/about.js"),
+          "author_components.php": path.resolve("./src/templates/author.js"),
         }
 
         // Create Page pages.
@@ -172,7 +172,7 @@ exports.createPages = ({ graphql, actions }) => {
             reject(result.errors)
           }
 
-          const authorPostsTemplate = path.resolve("./src/pages/author.js")
+          const authorPostsTemplate = path.resolve("./src/templates/author.js")
 
           // We want to create a detailed page for each
           // post node. We'll just use the WordPress Slug for the slug.
@@ -261,7 +261,7 @@ exports.createPages = ({ graphql, actions }) => {
             reject(result.errors)
           }
 
-          const singleEventTemplate = path.resolve("./src/pages/event.js")
+          const singleEventTemplate = path.resolve("./src/templates/event.js")
 
           // We want to create a detailed page for each
           // post node. We'll just use the WordPress Slug for the slug.
