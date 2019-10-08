@@ -7,9 +7,10 @@ import MusicPlayer from "../components/MusicPlayer"
 import EventSection from "../components/Events"
 import ShopContainer from "../components/ShopContainer"
 
-export default ({ pageContext }) => (
+// export default ({ pageContext }) => (
+  export default ({ }) => (
   <Layout2>
-    <Banner background={pageContext.featured_media.source_url} />
+    {/* <Banner background={pageContext.featured_media.source_url} /> */}
     <ArticleContainer />
     <MusicPlayer />
     <EventSection />

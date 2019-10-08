@@ -140,7 +140,7 @@ exports.createPages = ({ graphql, actions }) => {
             })
           })
         })
-        resolve()
+        // resolve()
       })
       // ==== END ARTICLE  POSTS ====
 
@@ -185,7 +185,7 @@ exports.createPages = ({ graphql, actions }) => {
             })
           })
         })
-        resolve()
+        // resolve()
       })
 
       // ==== ARTICLE COLLECTION ====
@@ -234,7 +234,7 @@ exports.createPages = ({ graphql, actions }) => {
             })
           })
 
-          resolve()
+          // resolve()
         })
       })
       // ==== EVENTS COLLECTION ====
