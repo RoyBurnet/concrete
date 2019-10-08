@@ -13,12 +13,23 @@ class EmailCTA extends Component {
             >
               MELD JE NU AAN VOOR DE NIEUWSBRIEF
             </h2>
+            {/* <MailForm>
+              <form action="">
+                <input type="email" name="name" />
+              </form>
+            </MailForm> */}
           </Content>
         </EmailWrapper>
       </>
     )
   }
 }
+
+const MailForm = styled.div`
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`
 
 const Content = styled.div`
   height: 400px;

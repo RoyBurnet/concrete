@@ -33,7 +33,7 @@ const ArticleItem = () => {
                   <div
                     style={{
                       marginLeft: "5px",
-                      fontSize: "20px",
+                      fontSize: "14px",
                       zIndex: "100",
                     }}
                   >
@@ -55,7 +55,6 @@ const ArticleItem = () => {
                         : articleItem.node.excerpt,
                     }}
                   />
-
                 </ArticleTextExcerpt> */}
               </ArticleItemCard>
             </LinkTag>
