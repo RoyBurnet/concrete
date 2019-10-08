@@ -88,7 +88,7 @@ exports.createPages = ({ graphql, actions }) => {
             // optional but is often necessary so the template
             // can query data specific to each page.
             path: `/${edge.node.slug}/`,
-            component: slash(renderComponentFromTemplate[edge.node.template]),
+            component:slash(renderComponentFromTemplate[edge.node.template]),
             context: edge.node,
           })
         })
